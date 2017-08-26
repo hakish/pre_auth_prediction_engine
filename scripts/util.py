@@ -64,7 +64,7 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-def create_plot_confusion_matrix(actual, predicted, plots_path):
+def create_plot_confusion_matrix(actual, predicted, plots_path, suffix):
     cnf_matrix = confusion_matrix(actual, predicted)
     print("Confusion Matrix for Random Forest model is :: ", cnf_matrix)
     np.set_printoptions(precision=2)
@@ -72,15 +72,15 @@ def create_plot_confusion_matrix(actual, predicted, plots_path):
     plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=['FALSE', 'TRUE'],
                           title='Confusion matrix, without normalization')
-    plt.savefig(plots_path + 'CM_Non_Normalized.png')
+    plt.savefig(str(plots_path)+'CM_Non_Normalized_'+str(suffix)+'.png')
     # Plot normalized confusion matrix
     plt.figure()
     plot_confusion_matrix(cnf_matrix, classes=['FALSE', 'TRUE'], normalize=True,
                           title='Normalized confusion matrix')
-    plt.savefig(plots_path + 'CM_Normalized.png')
+    plt.savefig(str(plots_path)+'CM_Normalized_'+str(suffix)+'.png')
 
-def check_col_distribution_and_plot(col, plots_path):
+def check_col_distribution_and_plot(col, plots_path, colname, suffix):
     y_test_tab = pd.crosstab(index=col,  # Make a crosstab
                              columns="count", )  # Name the count column
     y_test_tab.plot(kind="bar", figsize=(8, 8), stacked=True, legend=True)
-    plt.savefig(plots_path + 'DisributionOf_'+col+'Data.png')
+    plt.savefig(str(plots_path)+'DisributionOf_'+str(colname)+'_Data_'+str(suffix)+'.png')

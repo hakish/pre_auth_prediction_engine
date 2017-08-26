@@ -38,6 +38,7 @@ target_col_name = "target"
 # As our dataset contains a lot of categorical variables we need to dummify them to run logistic Regression
 print("Do pre-process 1")
 pa_data_df_train = do_preprocess_1(pa_data_df_train, target_col_name)
+pa_data_df_train = dummify(pa_data_df_train, target_col_name)
 print("Do pre-process 1 .. ends", pa_data_df_train.head())
 # do_logistic_regression(pa_data_df_train, target_col_name)
 # Create various models to find patterns in data
@@ -50,24 +51,26 @@ y_train = pa_data_df_train[target_col_name]
 y_pred_train = rf_model.predict(feature_frame_train)
 # Compute confusion matrix
 print("Compute the confusion for predictions on train data")
-create_plot_confusion_matrix(y_train, y_pred_train, 'K:\\insofe\\MyProject\\plots\\')
-
+create_plot_confusion_matrix(y_train, y_pred_train, 'K:\\insofe\\MyProject\\plots\\preprocess1\\random_forest\\','train')
+print("Accuracy of RF model is ::")
+print(accuracy_score(y_train, y_pred_train))
+print("Recall of RF model is ::")
+print(recall_score(y_train, y_pred_train))
 # Make predictions on test data using random forest model
 pa_data_df_test = do_preprocess_1(pa_data_df_test, target_col_name)
 pa_data_df_test = dummify(pa_data_df_test, target_col_name)
 feature_frame_test = pa_data_df_test.drop(target_col_name, axis=1)
 y_test = pa_data_df_test[target_col_name]
 y_pred_test = rf_model.predict(feature_frame_test)
-# Compute confusion matrix
+
+# Compute confusion matrix for test data predictions
 print("Look at the distribution of the response in test data")
 print(y_test.describe())
 
-
 # Look at the count of the target variable in the dataset
-check_col_distribution_and_plot(y_test, 'K:\\insofe\\MyProject\\plots\\')
+check_col_distribution_and_plot(y_test, 'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'target', 'test')
 
-
-create_plot_confusion_matrix(y_test, y_pred_test, 'K:\\insofe\\MyProject\\plots\\')
+create_plot_confusion_matrix(y_test, y_pred_test, 'K:\\insofe\\MyProject\\plots\\preprocess1\\random_forest\\', 'test')
 
 print("Accuracy of RF model is ::")
 print(accuracy_score(y_test, y_pred_test))

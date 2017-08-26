@@ -9,8 +9,6 @@ from scripts.util import dummify
 def create_random_forest_model(df, targetColName):
 
     print("Create Random Forest Model")
-    print("Dummify all the categorical attributes")
-    df = dummify(df, targetColName)
     feature_data_frame = df.drop(targetColName, axis=1)
     target = df[targetColName]
     ## Training!
