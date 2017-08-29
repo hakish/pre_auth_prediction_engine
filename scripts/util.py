@@ -3,10 +3,12 @@ Created on Mon Aug  7 08:43:35 2017
 
 @author: kisho
 """
-import pandas as pd
 import itertools
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn.metrics import accuracy_score, recall_score, f1_score, precision_score, precision_recall_curve
 from sklearn.metrics import confusion_matrix
 
 # Function definitions
@@ -66,7 +68,7 @@ def plot_confusion_matrix(cm, classes,
 
 def create_plot_confusion_matrix(actual, predicted, plots_path, suffix):
     cnf_matrix = confusion_matrix(actual, predicted)
-    print("Confusion Matrix for Random Forest model is :: ", cnf_matrix)
+    print("Confusion Matrix for model is :: ", cnf_matrix)
     np.set_printoptions(precision=2)
     # Plot non-normalized confusion matrix
     plt.figure()
@@ -84,3 +86,17 @@ def check_col_distribution_and_plot(col, plots_path, colname, suffix):
                              columns="count", )  # Name the count column
     y_test_tab.plot(kind="bar", figsize=(8, 8), stacked=True, legend=True)
     plt.savefig(str(plots_path)+'DisributionOf_'+str(colname)+'_Data_'+str(suffix)+'.png')
+
+def calc_perf_metrics_for_model(model, modelname, actual, predictions, targetcolname, plots_path, suffix):
+    # Look at the count of the target variable in the dataset
+    check_col_distribution_and_plot(actual, plots_path, targetcolname, suffix)
+    create_plot_confusion_matrix(actual, predictions, str(plots_path+modelname+"\\"), suffix)
+    print("================ Evaluation metrics for model "+modelname+" [Dataset is "+suffix+"]=======================")
+    print("Accuracy of model is ::")
+    print(accuracy_score(actual, predictions))
+    print("Recall of model is ::")
+    print(recall_score(actual, predictions))
+    print("Precision score of model is ::")
+    print(precision_score(actual, predictions))
+    print("F1 score of model is ::")
+    print(f1_score(actual, predictions))

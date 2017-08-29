@@ -4,17 +4,12 @@ Created on Mon Aug  7 08:43:35 2017
 
 @author: kisho
 """
-# Import the `pandas` library as `pd`
-import pandas as pd
+
 from sklearn.model_selection import train_test_split
-from scripts.descriptive_stats_and_plots import descriptive_stats_and_plots
-from scripts.util import read_csv_data, dummify, create_plot_confusion_matrix, check_col_distribution_and_plot
+
+from scripts.ModelBuilder import build_random_forest_model, build_neural_network_model, build_svm_model
 from scripts.preprocess1 import do_preprocess_1
-from scripts.LogisticRegression import do_logistic_regression
-from scripts.RandomForestForPAPE import create_random_forest_model
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score, recall_score
+from scripts.util import read_csv_data, dummify, calc_perf_metrics_for_model
 
 filename = "K:\\insofe\\MyProject\\dataset\\PriorAuth_Data.csv"
 columnNames = ["userid", "drug", "drugsubclass", "drugclass", "drugchemicalname", "gpi",
@@ -39,41 +34,73 @@ target_col_name = "target"
 print("Do pre-process 1")
 pa_data_df_train = do_preprocess_1(pa_data_df_train, target_col_name)
 pa_data_df_train = dummify(pa_data_df_train, target_col_name)
-print("Do pre-process 1 .. ends", pa_data_df_train.head())
-# do_logistic_regression(pa_data_df_train, target_col_name)
-# Create various models to find patterns in data
-# Do Random Forest Modelling
-rf_model = create_random_forest_model(pa_data_df_train, target_col_name)
-print("Random Forest model is :: ", rf_model)
-# Make predictions on the train data and check the model metrics
 feature_frame_train = pa_data_df_train.drop(target_col_name, axis=1)
 y_train = pa_data_df_train[target_col_name]
-y_pred_train = rf_model.predict(feature_frame_train)
-# Compute confusion matrix
-print("Compute the confusion for predictions on train data")
-create_plot_confusion_matrix(y_train, y_pred_train, 'K:\\insofe\\MyProject\\plots\\preprocess1\\random_forest\\','train')
-print("Accuracy of RF model is ::")
-print(accuracy_score(y_train, y_pred_train))
-print("Recall of RF model is ::")
-print(recall_score(y_train, y_pred_train))
-# Make predictions on test data using random forest model
+
 pa_data_df_test = do_preprocess_1(pa_data_df_test, target_col_name)
 pa_data_df_test = dummify(pa_data_df_test, target_col_name)
 feature_frame_test = pa_data_df_test.drop(target_col_name, axis=1)
 y_test = pa_data_df_test[target_col_name]
-y_pred_test = rf_model.predict(feature_frame_test)
+print("Do pre-process 1 .. ends", pa_data_df_train.head())
+
+# do_logistic_regression(pa_data_df_train, target_col_name)
+
+# Create various models to find patterns in data
+
+# ========================================================================================================= #
+# Do Random Forest Modelling
+# pa_data_df_train_copy = pa_data_df_train.copy()
+# rf_model = build_random_forest_model(pa_data_df_train_copy, target_col_name)
+# print("Random Forest model is :: ", rf_model)
+# # Make predictions on the train data and check the model metrics
+#
+# y_pred_train = rf_model.predict(feature_frame_train)
+# # Compute confusion matrix on train data
+# calc_perf_metrics_for_model(rf_model, 'Random_Forest', y_train, y_pred_train, target_col_name,
+#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
+# # Make predictions on test data using random forest model
+#
+# y_pred_test = rf_model.predict(feature_frame_test)
+#
+# # Compute confusion matrix for test data predictions
+# calc_perf_metrics_for_model(rf_model, 'Random_Forest', y_test, y_pred_test, target_col_name,
+#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')
+# plt.show()
+# ========================================================================================================= #
+
+# Build neural network model
+# pa_data_df_train_copy = pa_data_df_train.copy()
+# nn_model = build_neural_network_model(pa_data_df_train_copy, target_col_name)
+# print("Neural Net model is :: ", nn_model)
+# # Make predictions on the train data and check the model metrics
+#
+# y_pred_train = nn_model.predict(feature_frame_train)
+# # Compute confusion matrix on train data
+# calc_perf_metrics_for_model(nn_model, 'Neural_Net', y_train, y_pred_train, target_col_name,
+#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
+# # Make predictions on test data using random forest model
+#
+# y_pred_test = nn_model.predict(feature_frame_test)
+#
+# # Compute confusion matrix for test data predictions
+# calc_perf_metrics_for_model(nn_model, 'Neural_Net', y_test, y_pred_test, target_col_name,
+#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')
+# ========================================================================================================= #
+
+# Build svm model
+pa_data_df_train_copy = pa_data_df_train.copy()
+svm_model = build_svm_model(pa_data_df_train_copy, target_col_name)
+print("svm model is :: ", svm_model)
+# Make predictions on the train data and check the model metrics
+
+y_pred_train = svm_model.predict(feature_frame_train)
+# Compute confusion matrix on train data
+calc_perf_metrics_for_model(svm_model, 'SVM', y_train, y_pred_train, target_col_name,
+                            'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
+# Make predictions on test data using random forest model
+
+y_pred_test = svm_model.predict(feature_frame_test)
 
 # Compute confusion matrix for test data predictions
-print("Look at the distribution of the response in test data")
-print(y_test.describe())
-
-# Look at the count of the target variable in the dataset
-check_col_distribution_and_plot(y_test, 'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'target', 'test')
-
-create_plot_confusion_matrix(y_test, y_pred_test, 'K:\\insofe\\MyProject\\plots\\preprocess1\\random_forest\\', 'test')
-
-print("Accuracy of RF model is ::")
-print(accuracy_score(y_test, y_pred_test))
-print("Recall of RF model is ::")
-print(recall_score(y_test, y_pred_test))
-# plt.show()
+calc_perf_metrics_for_model(svm_model, 'SVM', y_test, y_pred_test, target_col_name,
+                            'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')

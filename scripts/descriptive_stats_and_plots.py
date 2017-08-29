@@ -88,4 +88,3 @@ def descriptive_stats_and_plots(pa_df, plots_path):
     doPredictorTagetFrequencyTotalPlot("rxgroupid", tmp_pa_df, plots_path)
     doPredictorTagetFrequencyTotalPlot("bin", tmp_pa_df, plots_path)
     doPredictorTagetFrequencyTotalPlot("ndc", tmp_pa_df, plots_path)
-    doPredictorTagetFrequencyTotalPlot("gpi", tmp_pa_df, plots_path)

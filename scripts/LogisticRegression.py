@@ -22,8 +22,6 @@ def do_logistic_regression(df, targetColName):
     print(df.columns)
     # Create and fit selector
     selector = SelectKBest(f_classif, k=6)
-    feature_data_frame = df.drop(targetColName, axis=1)
-    selector.fit(feature_data_frame, df[targetColName])
     # Get idxs of columns to keep
     idxs_selected = selector.get_support(indices=True)
     print("Index is ::",idxs_selected)
