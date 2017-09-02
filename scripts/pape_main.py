@@ -4,12 +4,12 @@ Created on Mon Aug  7 08:43:35 2017
 
 @author: kisho
 """
-
 from sklearn.model_selection import train_test_split
 
-from scripts.ModelBuilder import build_random_forest_model, build_neural_network_model, build_svm_model
-from scripts.preprocess1 import do_preprocess_1
-from scripts.util import read_csv_data, dummify, calc_perf_metrics_for_model
+from scripts.test_model import test
+from scripts.train_model import train
+from scripts.util import read_csv_data
+from scripts.preprocessor1 import do_preprocess_1
 
 filename = "K:\\insofe\\MyProject\\dataset\\PriorAuth_Data.csv"
 columnNames = ["userid", "drug", "drugsubclass", "drugclass", "drugchemicalname", "gpi",
@@ -21,86 +21,41 @@ pa_data_df = read_csv_data(filename, columnNames)
 
 # Split the data into train and test
 pa_data_df_train, pa_data_df_test = train_test_split(pa_data_df, test_size=0.33, random_state=42)
-
-pa_data_df_train.shape
-pa_data_df_test.shape
+print(pa_data_df_train.shape)
+print(pa_data_df_test.shape)
 target_col_name = "target"
 # See the summary statistics and plots
 # descriptive_stats_and_plots(pa_data_df_train, plots_path='K:\\insofe\\MyProject\\plots\\')
 
 # descriptive_stats_and_plots(pa_data_df_train, plots_path='K:\\insofe\\MyProject\\plots\\preprocess1\\')
 
-# As our dataset contains a lot of categorical variables we need to dummify them to run logistic Regression
-print("Do pre-process 1")
-pa_data_df_train = do_preprocess_1(pa_data_df_train, target_col_name)
-pa_data_df_train = dummify(pa_data_df_train, target_col_name)
-feature_frame_train = pa_data_df_train.drop(target_col_name, axis=1)
-y_train = pa_data_df_train[target_col_name]
+# =================================================================================================================#
+# 1.
+# Pre processing approach:
+# Reducing the dimensionality of the dataset due to large number of levels in categorical data
+# by taking the top 10 levels by frequency of occurence and marking the rest as others.
+# =================================================================================================================#
+print("Preprocess the train data and create various models")
+# Do some pre-processing on the data
+train_data_pre_processed = do_preprocess_1(pa_data_df_train, target_col_name)
+train(train_data_pre_processed, target_col_name)
+print("training complete...")
 
-pa_data_df_test = do_preprocess_1(pa_data_df_test, target_col_name)
-pa_data_df_test = dummify(pa_data_df_test, target_col_name)
-feature_frame_test = pa_data_df_test.drop(target_col_name, axis=1)
-y_test = pa_data_df_test[target_col_name]
-print("Do pre-process 1 .. ends", pa_data_df_train.head())
+print("evaluate the models on the test data")
+test_data_pre_processed = do_preprocess_1(pa_data_df_test, target_col_name)
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_naive_bayes.sav', '../plots/preprocess1/',
+     'naive_bayes')
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_random_forest.sav', '../plots/preprocess1/',
+     'random_forest')
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_neural_net.sav', '../plots/preprocess1/',
+     'neural_net')
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_svm.sav', '../plots/preprocess1/', 'svm')
+print("testing complete...")
+# =================================================================================================================#
 
-# do_logistic_regression(pa_data_df_train, target_col_name)
-
-# Create various models to find patterns in data
-
-# ========================================================================================================= #
-# Do Random Forest Modelling
-# pa_data_df_train_copy = pa_data_df_train.copy()
-# rf_model = build_random_forest_model(pa_data_df_train_copy, target_col_name)
-# print("Random Forest model is :: ", rf_model)
-# # Make predictions on the train data and check the model metrics
-#
-# y_pred_train = rf_model.predict(feature_frame_train)
-# # Compute confusion matrix on train data
-# calc_perf_metrics_for_model(rf_model, 'Random_Forest', y_train, y_pred_train, target_col_name,
-#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
-# # Make predictions on test data using random forest model
-#
-# y_pred_test = rf_model.predict(feature_frame_test)
-#
-# # Compute confusion matrix for test data predictions
-# calc_perf_metrics_for_model(rf_model, 'Random_Forest', y_test, y_pred_test, target_col_name,
-#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')
-# plt.show()
-# ========================================================================================================= #
-
-# Build neural network model
-# pa_data_df_train_copy = pa_data_df_train.copy()
-# nn_model = build_neural_network_model(pa_data_df_train_copy, target_col_name)
-# print("Neural Net model is :: ", nn_model)
-# # Make predictions on the train data and check the model metrics
-#
-# y_pred_train = nn_model.predict(feature_frame_train)
-# # Compute confusion matrix on train data
-# calc_perf_metrics_for_model(nn_model, 'Neural_Net', y_train, y_pred_train, target_col_name,
-#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
-# # Make predictions on test data using random forest model
-#
-# y_pred_test = nn_model.predict(feature_frame_test)
-#
-# # Compute confusion matrix for test data predictions
-# calc_perf_metrics_for_model(nn_model, 'Neural_Net', y_test, y_pred_test, target_col_name,
-#                             'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')
-# ========================================================================================================= #
-
-# Build svm model
-pa_data_df_train_copy = pa_data_df_train.copy()
-svm_model = build_svm_model(pa_data_df_train_copy, target_col_name)
-print("svm model is :: ", svm_model)
-# Make predictions on the train data and check the model metrics
-
-y_pred_train = svm_model.predict(feature_frame_train)
-# Compute confusion matrix on train data
-calc_perf_metrics_for_model(svm_model, 'SVM', y_train, y_pred_train, target_col_name,
-                            'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'train')
-# Make predictions on test data using random forest model
-
-y_pred_test = svm_model.predict(feature_frame_test)
-
-# Compute confusion matrix for test data predictions
-calc_perf_metrics_for_model(svm_model, 'SVM', y_test, y_pred_test, target_col_name,
-                            'K:\\insofe\\MyProject\\plots\\preprocess1\\', 'test')
+# =================================================================================================================#
+# 2.
+# Pre processing approach:
+# Reducing the dimensionality of the dataset due to large number of levels in categorical data
+# by applying clustering to find similarity in the levels.
+# =================================================================================================================#

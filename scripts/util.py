@@ -87,7 +87,7 @@ def check_col_distribution_and_plot(col, plots_path, colname, suffix):
     y_test_tab.plot(kind="bar", figsize=(8, 8), stacked=True, legend=True)
     plt.savefig(str(plots_path)+'DisributionOf_'+str(colname)+'_Data_'+str(suffix)+'.png')
 
-def calc_perf_metrics_for_model(model, modelname, actual, predictions, targetcolname, plots_path, suffix):
+def calc_perf_metrics_for_model(modelname, actual, predictions, targetcolname, plots_path, suffix):
     # Look at the count of the target variable in the dataset
     check_col_distribution_and_plot(actual, plots_path, targetcolname, suffix)
     create_plot_confusion_matrix(actual, predictions, str(plots_path+modelname+"\\"), suffix)
