@@ -1,0 +1,3054 @@
+2017-09-05 19:37:47,364 [MainThread  ] [INFO ]  (6293, 15)
+2017-09-05 19:37:47,365 [MainThread  ] [INFO ]  (3101, 15)
+2017-09-05 19:37:47,365 [MainThread  ] [INFO ]  Preprocess the train data with approach 1 and create various models
+2017-09-05 19:37:47,410 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:37:47,424 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:37:47,467 [MainThread  ] [INFO ]  top10levels for drug
+2017-09-05 19:37:47,467 [MainThread  ] [INFO ]  ['Drug024' 'Drug019' 'Drug158' 'Drug052' 'Drug212' 'Drug062' 'Drug007'
+ 'Drug150' 'Drug088' 'Drug038']
+2017-09-05 19:37:47,467 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E260AE18>
+2017-09-05 19:37:47,499 [MainThread  ] [INFO ]  top10levels for drugclass
+2017-09-05 19:37:47,499 [MainThread  ] [INFO ]  ['DC016' 'DC004' 'DC019' 'DC093' 'DC071' 'DC069' 'DC003' 'DC009' 'DC015'
+ 'DC073']
+2017-09-05 19:37:47,500 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E264EEA0>
+2017-09-05 19:37:47,532 [MainThread  ] [INFO ]  top10levels for drugsubclass
+2017-09-05 19:37:47,533 [MainThread  ] [INFO ]  ['DSC016' 'DSC020' 'DSC098' 'DSC017' 'DSC072' 'DSC003' 'DSC009' 'DSC015'
+ 'DSC077' 'DSC065']
+2017-09-05 19:37:47,533 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E265DEA0>
+2017-09-05 19:37:47,572 [MainThread  ] [INFO ]  top10levels for drugchemicalname
+2017-09-05 19:37:47,572 [MainThread  ] [INFO ]  ['DCN024' 'DCN019' 'DCN003' 'DCN030' 'DCN007' 'DCN048' 'DCN128' 'DCN174'
+ 'DCN088' 'DCN056']
+2017-09-05 19:37:47,573 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E265D510>
+2017-09-05 19:37:47,635 [MainThread  ] [INFO ]  top10levels for druggroup
+2017-09-05 19:37:47,635 [MainThread  ] [INFO ]  ['DG004' 'DG027' 'DG046' 'DG019' 'DG028' 'DG022' 'DG021' 'DG009' 'DG013'
+ 'DG011']
+2017-09-05 19:37:47,636 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E264E598>
+2017-09-05 19:37:47,670 [MainThread  ] [INFO ]  top10levels for state
+2017-09-05 19:37:47,671 [MainThread  ] [INFO ]  ['State2' 'State13' 'State4' 'State1' 'State22' 'State36' 'State7' 'State9'
+ 'State15' 'State8']
+2017-09-05 19:37:47,671 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E260A598>
+2017-09-05 19:37:47,705 [MainThread  ] [INFO ]  top10levels for pcn
+2017-09-05 19:37:47,705 [MainThread  ] [INFO ]  ['PCN0005' 'PCN0003' 'PCN0036' 'PCN0166' 'PCN0023' 'PCN0179' 'PCN0018'
+ 'PCN0078' 'PCN0019' 'PCN0059']
+2017-09-05 19:37:47,706 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E264EBF8>
+2017-09-05 19:37:47,746 [MainThread  ] [INFO ]  top10levels for rxgroupid
+2017-09-05 19:37:47,747 [MainThread  ] [INFO ]  ['G060' 'G018' 'G476' 'G231' 'G127' 'G135' 'G102' 'G106' 'G481' 'G541']
+2017-09-05 19:37:47,747 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E265DBF8>
+2017-09-05 19:37:47,785 [MainThread  ] [INFO ]  top10levels for bin
+2017-09-05 19:37:47,786 [MainThread  ] [INFO ]  ['B003' 'B090' 'B014' 'B018' 'B036' 'B016' 'B019' 'B022' 'B005' 'B008']
+2017-09-05 19:37:47,786 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E265D7B8>
+2017-09-05 19:37:47,858 [MainThread  ] [INFO ]  top10levels for ndc
+2017-09-05 19:37:47,858 [MainThread  ] [INFO ]  ['NDC026' 'NDC1023' 'NDC020' 'NDC114' 'NDC071' 'NDC449' 'NDC239' 'NDC587'
+ 'NDC324' 'NDC028']
+2017-09-05 19:37:47,858 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E264E7B8>
+2017-09-05 19:37:47,909 [MainThread  ] [INFO ]  top10levels for gpi
+2017-09-05 19:37:47,910 [MainThread  ] [INFO ]  ['DGPI025' 'DGPI003' 'DGPI019' 'DGPI067' 'DGPI232' 'DGPI462' 'DGPI056'
+ 'DGPI282' 'DGPI204' 'DGPI235']
+2017-09-05 19:37:47,910 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5E26662F0>
+2017-09-05 19:37:47,919 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:37:47,959 [MainThread  ] [INFO ]           drug drugsubclass drugclass drugchemicalname    gpi    ndc druggroup  \
+count    6293         6293      6293             6293   6293   6293      6293   
+unique     11           11        11               11     11     11        11   
+top     other        other     other            other  other  other     other   
+freq     5260         4221      4067             4913   5426   5752      3112   
+
+       rxgroupid    bin    pcn  state  target  
+count       6293   6293   6293   6293    6293  
+unique        11     11     11     11       2  
+top        other  other  other  other       1  
+freq        4501   2033   2271   1570    4107  
+2017-09-05 19:37:47,975 [MainThread  ] [INFO ]  drug                  object
+drugsubclass          object
+drugclass             object
+drugchemicalname      object
+gpi                   object
+ndc                   object
+druggroup             object
+rxgroupid             object
+bin                   object
+pcn                   object
+state                 object
+target              category
+dtype: object
+2017-09-05 19:37:47,998 [MainThread  ] [INFO ]        drug_Drug007  drug_Drug019  drug_Drug024  drug_Drug038  drug_Drug052  \
+4562             0             0             0             0             0   
+3365             0             0             0             0             0   
+2709             0             0             0             0             0   
+2357             0             0             0             0             0   
+6962             0             0             0             0             0   
+
+      drug_Drug062  drug_Drug088  drug_Drug150  drug_Drug158  drug_Drug212  \
+4562             0             0             0             0             0   
+3365             0             0             0             0             0   
+2709             0             0             0             0             0   
+2357             0             0             0             0             0   
+6962             0             0             0             0             0   
+
+         ...       state_State13  state_State15  state_State2  state_State22  \
+4562     ...                   0              0             1              0   
+3365     ...                   0              0             1              0   
+2709     ...                   0              0             0              0   
+2357     ...                   0              0             0              0   
+6962     ...                   0              0             0              0   
+
+      state_State36  state_State4  state_State7  state_State8  state_State9  \
+4562              0             0             0             0             0   
+3365              0             0             0             0             0   
+2709              1             0             0             0             0   
+2357              0             0             0             0             0   
+6962              0             0             0             1             0   
+
+      state_other  
+4562            0  
+3365            0  
+2709            0  
+2357            1  
+6962            0  
+
+[5 rows x 121 columns]
+2017-09-05 19:37:48,063 [MainThread  ] [INFO ]  Create Random Forest Model
+2017-09-05 19:38:04,024 [MainThread  ] [INFO ]  Scores after performing cross validation :: [ 0.64603175  0.65079365  0.66349206  0.64920635  0.63809524  0.64126984
+  0.6581876   0.6544586   0.63694268  0.64808917]
+2017-09-05 19:38:04,269 [MainThread  ] [INFO ]  describe y_pred_train before save :: [0 1]
+2017-09-05 19:38:04,269 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_random_forest.sav
+2017-09-05 19:38:04,298 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:38:04,503 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 0]
+2017-09-05 19:38:04,756 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 1.          0.72638178  0.81613059 ...,  0.65762157  0.87716631
+  0.31580952]
+2017-09-05 19:38:04,762 [MainThread  ] [INFO ]  describe y_pred_train :: [0 1]
+2017-09-05 19:38:05,112 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 913 1273]
+ [ 314 3793]]
+2017-09-05 19:38:05,233 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:38:05,233 [MainThread  ] [INFO ]  [[ 913 1273]
+ [ 314 3793]]
+2017-09-05 19:38:05,574 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:38:05,574 [MainThread  ] [INFO ]  [[ 0.41765782  0.58234218]
+ [ 0.07645483  0.92354517]]
+2017-09-05 19:38:05,860 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is train]=======================
+2017-09-05 19:38:05,860 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:38:05,862 [MainThread  ] [INFO ]  0.747815032576
+2017-09-05 19:38:05,862 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:38:05,866 [MainThread  ] [INFO ]  0.923545166788
+2017-09-05 19:38:05,866 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:38:05,870 [MainThread  ] [INFO ]  0.748716936439
+2017-09-05 19:38:05,870 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:38:05,873 [MainThread  ] [INFO ]  0.826992259893
+2017-09-05 19:38:05,874 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:38:06,136 [MainThread  ] [INFO ]  Build Neural Net Model
+2017-09-05 19:38:08,662 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_neural_net.sav
+2017-09-05 19:38:08,663 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:38:08,669 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:38:08,675 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.75184663  0.6867902   0.87601814 ...,  0.82303482  0.68912549
+  0.65880411]
+2017-09-05 19:38:09,001 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 686 1500]
+ [ 340 3767]]
+2017-09-05 19:38:09,119 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:38:09,119 [MainThread  ] [INFO ]  [[ 686 1500]
+ [ 340 3767]]
+2017-09-05 19:38:09,437 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:38:09,438 [MainThread  ] [INFO ]  [[ 0.31381519  0.68618481]
+ [ 0.08278549  0.91721451]]
+2017-09-05 19:38:09,642 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is train]=======================
+2017-09-05 19:38:09,642 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:38:09,644 [MainThread  ] [INFO ]  0.707611631972
+2017-09-05 19:38:09,644 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:38:09,647 [MainThread  ] [INFO ]  0.917214511809
+2017-09-05 19:38:09,648 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:38:09,650 [MainThread  ] [INFO ]  0.715207898234
+2017-09-05 19:38:09,650 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:38:09,652 [MainThread  ] [INFO ]  0.803712395989
+2017-09-05 19:38:09,652 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:38:09,894 [MainThread  ] [INFO ]  Build SVM Model
+2017-09-05 19:38:50,469 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_svm.sav
+2017-09-05 19:38:50,486 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:38:55,620 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 0 1]
+2017-09-05 19:39:00,788 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.68202573  0.68194633  0.68203451 ...,  0.68235441  0.46464671
+  0.68139372]
+2017-09-05 19:39:01,087 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 281 1905]
+ [ 146 3961]]
+2017-09-05 19:39:01,234 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:01,234 [MainThread  ] [INFO ]  [[ 281 1905]
+ [ 146 3961]]
+2017-09-05 19:39:01,635 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:01,635 [MainThread  ] [INFO ]  [[ 0.12854529  0.87145471]
+ [ 0.03554906  0.96445094]]
+2017-09-05 19:39:01,918 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is train]=======================
+2017-09-05 19:39:01,918 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:01,919 [MainThread  ] [INFO ]  0.674082313682
+2017-09-05 19:39:01,919 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:01,922 [MainThread  ] [INFO ]  0.964450937424
+2017-09-05 19:39:01,922 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:01,924 [MainThread  ] [INFO ]  0.67524718718
+2017-09-05 19:39:01,925 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:01,927 [MainThread  ] [INFO ]  0.794344730773
+2017-09-05 19:39:01,928 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:02,199 [MainThread  ] [INFO ]  Build Naives Bayes Model
+2017-09-05 19:39:02,274 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_naive_bayes.sav
+2017-09-05 19:39:02,275 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:39:02,280 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 0 1]
+2017-09-05 19:39:02,287 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.69225588  0.91218345  0.66533115 ...,  0.7637488   0.02948634
+  0.86255609]
+2017-09-05 19:39:02,611 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 651 1535]
+ [ 563 3544]]
+2017-09-05 19:39:02,732 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:02,732 [MainThread  ] [INFO ]  [[ 651 1535]
+ [ 563 3544]]
+2017-09-05 19:39:03,058 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:03,058 [MainThread  ] [INFO ]  [[ 0.29780421  0.70219579]
+ [ 0.13708303  0.86291697]]
+2017-09-05 19:39:03,249 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is train]=======================
+2017-09-05 19:39:03,249 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:03,251 [MainThread  ] [INFO ]  0.666613697759
+2017-09-05 19:39:03,251 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:03,253 [MainThread  ] [INFO ]  0.862916971025
+2017-09-05 19:39:03,253 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:03,255 [MainThread  ] [INFO ]  0.697775152589
+2017-09-05 19:39:03,255 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:03,258 [MainThread  ] [INFO ]  0.771608970172
+2017-09-05 19:39:03,258 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:03,520 [MainThread  ] [INFO ]  training complete...
+2017-09-05 19:39:03,520 [MainThread  ] [INFO ]  evaluate the models on the test data
+2017-09-05 19:39:03,562 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:39:03,578 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:39:03,627 [MainThread  ] [INFO ]  top10levels for drug
+2017-09-05 19:39:03,627 [MainThread  ] [INFO ]  ['Drug019' 'Drug024' 'Drug007' 'Drug212' 'Drug158' 'Drug150' 'Drug088'
+ 'Drug017' 'Drug052' 'Drug038']
+2017-09-05 19:39:03,627 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D3F8C8>
+2017-09-05 19:39:03,655 [MainThread  ] [INFO ]  top10levels for drugclass
+2017-09-05 19:39:03,655 [MainThread  ] [INFO ]  ['DC016' 'DC004' 'DC019' 'DC093' 'DC009' 'DC069' 'DC015' 'DC007' 'DC062'
+ 'DC071']
+2017-09-05 19:39:03,656 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D3F1E0>
+2017-09-05 19:39:03,679 [MainThread  ] [INFO ]  top10levels for drugsubclass
+2017-09-05 19:39:03,679 [MainThread  ] [INFO ]  ['DSC016' 'DSC020' 'DSC017' 'DSC098' 'DSC009' 'DSC072' 'DSC015' 'DSC007'
+ 'DSC065' 'DSC003']
+2017-09-05 19:39:03,680 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D47488>
+2017-09-05 19:39:03,711 [MainThread  ] [INFO ]  top10levels for drugchemicalname
+2017-09-05 19:39:03,711 [MainThread  ] [INFO ]  ['DCN024' 'DCN019' 'DCN007' 'DCN030' 'DCN003' 'DCN174' 'DCN128' 'DCN088'
+ 'DCN211' 'DCN079']
+2017-09-05 19:39:03,711 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D511E0>
+2017-09-05 19:39:03,739 [MainThread  ] [INFO ]  top10levels for druggroup
+2017-09-05 19:39:03,740 [MainThread  ] [INFO ]  ['DG004' 'DG046' 'DG028' 'DG027' 'DG022' 'DG009' 'DG019' 'DG021' 'DG007'
+ 'DG013']
+2017-09-05 19:39:03,740 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D47840>
+2017-09-05 19:39:03,764 [MainThread  ] [INFO ]  top10levels for state
+2017-09-05 19:39:03,764 [MainThread  ] [INFO ]  ['State2' 'State13' 'State4' 'State1' 'State22' 'State7' 'State9' 'State36'
+ 'State15' 'State8']
+2017-09-05 19:39:03,764 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D3F510>
+2017-09-05 19:39:03,786 [MainThread  ] [INFO ]  top10levels for pcn
+2017-09-05 19:39:03,786 [MainThread  ] [INFO ]  ['PCN0005' 'PCN0003' 'PCN0036' 'PCN0166' 'PCN0023' 'PCN0018' 'PCN0179'
+ 'PCN0078' 'PCN0019' 'PCN0049']
+2017-09-05 19:39:03,786 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D510D0>
+2017-09-05 19:39:03,813 [MainThread  ] [INFO ]  top10levels for rxgroupid
+2017-09-05 19:39:03,813 [MainThread  ] [INFO ]  ['G060' 'G018' 'G476' 'G231' 'G102' 'G106' 'G135' 'G481' 'G127' 'G130']
+2017-09-05 19:39:03,813 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D51488>
+2017-09-05 19:39:03,837 [MainThread  ] [INFO ]  top10levels for bin
+2017-09-05 19:39:03,837 [MainThread  ] [INFO ]  ['B003' 'B090' 'B014' 'B018' 'B036' 'B022' 'B016' 'B019' 'B005' 'B055']
+2017-09-05 19:39:03,837 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D3F598>
+2017-09-05 19:39:03,869 [MainThread  ] [INFO ]  top10levels for ndc
+2017-09-05 19:39:03,869 [MainThread  ] [INFO ]  ['NDC026' 'NDC020' 'NDC1023' 'NDC064' 'NDC071' 'NDC114' 'NDC449' 'NDC028'
+ 'NDC107' 'NDC165']
+2017-09-05 19:39:03,869 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D476A8>
+2017-09-05 19:39:03,903 [MainThread  ] [INFO ]  top10levels for gpi
+2017-09-05 19:39:03,903 [MainThread  ] [INFO ]  ['DGPI025' 'DGPI003' 'DGPI019' 'DGPI067' 'DGPI282' 'DGPI288' 'DGPI235'
+ 'DGPI032' 'DGPI060' 'DGPI056']
+2017-09-05 19:39:03,903 [MainThread  ] [INFO ]  <function doPredictorTagetFrequencyTop10Levels.<locals>.<lambda> at 0x000001B5F1D47048>
+2017-09-05 19:39:03,909 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:39:03,914 [MainThread  ] [INFO ]              target
+count  3101.000000
+mean      0.666882
+std       0.471404
+min       0.000000
+25%       0.000000
+50%       1.000000
+75%       1.000000
+max       1.000000
+2017-09-05 19:39:03,917 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target               int64
+dtype: object
+2017-09-05 19:39:03,932 [MainThread  ] [INFO ]        drug_Drug007  drug_Drug017  drug_Drug019  drug_Drug024  drug_Drug038  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+      drug_Drug052  drug_Drug088  drug_Drug150  drug_Drug158  drug_Drug212  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+         ...       state_State13  state_State15  state_State2  state_State22  \
+2221     ...                   1              0             0              0   
+8295     ...                   0              0             0              0   
+1731     ...                   0              0             0              0   
+6423     ...                   0              0             0              0   
+8706     ...                   0              0             0              0   
+
+      state_State36  state_State4  state_State7  state_State8  state_State9  \
+2221              0             0             0             0             0   
+8295              0             0             0             1             0   
+1731              0             0             0             0             0   
+6423              0             1             0             0             0   
+8706              0             0             0             0             0   
+
+      state_other  
+2221            0  
+8295            0  
+1731            1  
+6423            0  
+8706            1  
+
+[5 rows x 121 columns]
+2017-09-05 19:39:03,955 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_naive_bayes.sav
+2017-09-05 19:39:03,956 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:39:03,959 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 0 1 1]
+2017-09-05 19:39:03,964 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.85996464  0.73234808  0.85266792 ...,  0.20596941  0.89315572
+  0.86409771]
+2017-09-05 19:39:04,295 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 275  758]
+ [ 325 1743]]
+2017-09-05 19:39:04,421 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:04,421 [MainThread  ] [INFO ]  [[ 275  758]
+ [ 325 1743]]
+2017-09-05 19:39:04,758 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:04,759 [MainThread  ] [INFO ]  [[ 0.26621491  0.73378509]
+ [ 0.15715667  0.84284333]]
+2017-09-05 19:39:04,962 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is test]=======================
+2017-09-05 19:39:04,962 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:04,963 [MainThread  ] [INFO ]  0.650757820058
+2017-09-05 19:39:04,963 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:04,966 [MainThread  ] [INFO ]  0.842843326886
+2017-09-05 19:39:04,967 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:04,969 [MainThread  ] [INFO ]  0.696921231507
+2017-09-05 19:39:04,970 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:04,971 [MainThread  ] [INFO ]  0.762967826658
+2017-09-05 19:39:04,972 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:05,325 [MainThread  ] [INFO ]        drug_Drug007  drug_Drug017  drug_Drug019  drug_Drug024  drug_Drug038  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+      drug_Drug052  drug_Drug088  drug_Drug150  drug_Drug158  drug_Drug212  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+         ...       state_State13  state_State15  state_State2  state_State22  \
+2221     ...                   1              0             0              0   
+8295     ...                   0              0             0              0   
+1731     ...                   0              0             0              0   
+6423     ...                   0              0             0              0   
+8706     ...                   0              0             0              0   
+
+      state_State36  state_State4  state_State7  state_State8  state_State9  \
+2221              0             0             0             0             0   
+8295              0             0             0             1             0   
+1731              0             0             0             0             0   
+6423              0             1             0             0             0   
+8706              0             0             0             0             0   
+
+      state_other  
+2221            0  
+8295            0  
+1731            1  
+6423            0  
+8706            1  
+
+[5 rows x 121 columns]
+2017-09-05 19:39:05,345 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_random_forest.sav
+2017-09-05 19:39:05,376 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:39:05,464 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 0 1 1]
+2017-09-05 19:39:05,553 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.60135362  0.67536161  0.81239284 ...,  0.48832547  0.77709347
+  0.77039633]
+2017-09-05 19:39:05,884 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 197  836]
+ [ 257 1811]]
+2017-09-05 19:39:06,022 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:06,023 [MainThread  ] [INFO ]  [[ 197  836]
+ [ 257 1811]]
+2017-09-05 19:39:06,418 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:06,419 [MainThread  ] [INFO ]  [[ 0.19070668  0.80929332]
+ [ 0.12427466  0.87572534]]
+2017-09-05 19:39:06,632 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is test]=======================
+2017-09-05 19:39:06,632 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:06,633 [MainThread  ] [INFO ]  0.647533053854
+2017-09-05 19:39:06,633 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:06,635 [MainThread  ] [INFO ]  0.875725338491
+2017-09-05 19:39:06,635 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:06,637 [MainThread  ] [INFO ]  0.68417075935
+2017-09-05 19:39:06,637 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:06,639 [MainThread  ] [INFO ]  0.768186638388
+2017-09-05 19:39:06,639 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:06,907 [MainThread  ] [INFO ]        drug_Drug007  drug_Drug017  drug_Drug019  drug_Drug024  drug_Drug038  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+      drug_Drug052  drug_Drug088  drug_Drug150  drug_Drug158  drug_Drug212  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+         ...       state_State13  state_State15  state_State2  state_State22  \
+2221     ...                   1              0             0              0   
+8295     ...                   0              0             0              0   
+1731     ...                   0              0             0              0   
+6423     ...                   0              0             0              0   
+8706     ...                   0              0             0              0   
+
+      state_State36  state_State4  state_State7  state_State8  state_State9  \
+2221              0             0             0             0             0   
+8295              0             0             0             1             0   
+1731              0             0             0             0             0   
+6423              0             1             0             0             0   
+8706              0             0             0             0             0   
+
+      state_other  
+2221            0  
+8295            0  
+1731            1  
+6423            0  
+8706            1  
+
+[5 rows x 121 columns]
+2017-09-05 19:39:06,929 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_neural_net.sav
+2017-09-05 19:39:06,930 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:39:06,934 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:39:06,937 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.55150469  0.61864695  0.93213452 ...,  0.683903    0.86658633
+  0.78036431]
+2017-09-05 19:39:07,261 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 271  762]
+ [ 424 1644]]
+2017-09-05 19:39:07,385 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:07,386 [MainThread  ] [INFO ]  [[ 271  762]
+ [ 424 1644]]
+2017-09-05 19:39:07,704 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:07,705 [MainThread  ] [INFO ]  [[ 0.26234269  0.73765731]
+ [ 0.20502901  0.79497099]]
+2017-09-05 19:39:07,897 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is test]=======================
+2017-09-05 19:39:07,897 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:07,898 [MainThread  ] [INFO ]  0.617542728152
+2017-09-05 19:39:07,898 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:07,899 [MainThread  ] [INFO ]  0.79497098646
+2017-09-05 19:39:07,899 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:07,901 [MainThread  ] [INFO ]  0.683291770574
+2017-09-05 19:39:07,901 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:07,902 [MainThread  ] [INFO ]  0.734912829683
+2017-09-05 19:39:07,902 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:08,257 [MainThread  ] [INFO ]        drug_Drug007  drug_Drug017  drug_Drug019  drug_Drug024  drug_Drug038  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+      drug_Drug052  drug_Drug088  drug_Drug150  drug_Drug158  drug_Drug212  \
+2221             0             0             0             0             0   
+8295             0             0             0             0             0   
+1731             0             0             0             0             0   
+6423             0             0             0             0             0   
+8706             0             0             0             0             0   
+
+         ...       state_State13  state_State15  state_State2  state_State22  \
+2221     ...                   1              0             0              0   
+8295     ...                   0              0             0              0   
+1731     ...                   0              0             0              0   
+6423     ...                   0              0             0              0   
+8706     ...                   0              0             0              0   
+
+      state_State36  state_State4  state_State7  state_State8  state_State9  \
+2221              0             0             0             0             0   
+8295              0             0             0             1             0   
+1731              0             0             0             0             0   
+6423              0             1             0             0             0   
+8706              0             0             0             0             0   
+
+      state_other  
+2221            0  
+8295            0  
+1731            1  
+6423            0  
+8706            1  
+
+[5 rows x 121 columns]
+2017-09-05 19:39:08,284 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess1/model_svm.sav
+2017-09-05 19:39:08,291 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:39:10,780 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:39:13,222 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.68185103  0.6819428   0.68459833 ...,  0.59967364  0.69451224
+  0.68202677]
+2017-09-05 19:39:13,552 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[  66  967]
+ [  33 2035]]
+2017-09-05 19:39:13,709 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:39:13,709 [MainThread  ] [INFO ]  [[  66  967]
+ [  33 2035]]
+2017-09-05 19:39:14,066 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:39:14,066 [MainThread  ] [INFO ]  [[ 0.06389158  0.93610842]
+ [ 0.01595745  0.98404255]]
+2017-09-05 19:39:14,296 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is test]=======================
+2017-09-05 19:39:14,296 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:39:14,298 [MainThread  ] [INFO ]  0.677523379555
+2017-09-05 19:39:14,298 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:39:14,300 [MainThread  ] [INFO ]  0.984042553191
+2017-09-05 19:39:14,300 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:39:14,302 [MainThread  ] [INFO ]  0.677881412392
+2017-09-05 19:39:14,302 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:39:14,304 [MainThread  ] [INFO ]  0.802761341223
+2017-09-05 19:39:14,305 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:39:14,611 [MainThread  ] [INFO ]  testing complete...
+2017-09-05 19:41:26,614 [MainThread  ] [INFO ]  (6293, 15)
+2017-09-05 19:41:26,614 [MainThread  ] [INFO ]  (3101, 15)
+2017-09-05 19:41:26,615 [MainThread  ] [INFO ]  Preprocess the train data with approach 2 and create various models
+2017-09-05 19:41:26,660 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:41:26,674 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:41:26,693 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:41:26,736 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:41:26,750 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:41:26,763 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      6293   6293
+unique      733      2
+top     Drug024   TRUE
+freq        197   4107
+2017-09-05 19:41:29,847 [MainThread  ] [INFO ]  {8: 5957.0}
+2017-09-05 19:41:30,149 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          6293   6293
+unique          308      2
+top          DSC016   TRUE
+freq            422   4107
+2017-09-05 19:41:33,259 [MainThread  ] [INFO ]  {8: 5524.0}
+2017-09-05 19:41:33,402 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       6293   6293
+unique       247      2
+top        DC016   TRUE
+freq         422   4107
+2017-09-05 19:41:41,102 [MainThread  ] [INFO ]  {8: 5389.0}
+2017-09-05 19:41:41,245 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              6293   6293
+unique              485      2
+top              DCN024   TRUE
+freq                279   4107
+2017-09-05 19:41:44,210 [MainThread  ] [INFO ]  {8: 5723.0}
+2017-09-05 19:41:44,399 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      6293   6293
+unique      965      2
+top     DGPI025   TRUE
+freq        185   4107
+2017-09-05 19:41:52,065 [MainThread  ] [INFO ]  {8: 5840.0}
+2017-09-05 19:41:52,208 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     6293   6293
+unique    1578      2
+top     NDC026   TRUE
+freq       182   4107
+2017-09-05 19:41:57,491 [MainThread  ] [INFO ]  {8: 6004.0}
+2017-09-05 19:41:57,637 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       6293   6293
+unique        77      2
+top        DG004   TRUE
+freq        1032   4107
+2017-09-05 19:42:06,068 [MainThread  ] [INFO ]  {8: 4643.0}
+2017-09-05 19:42:06,210 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       6293   6293
+unique       834      2
+top         G060   TRUE
+freq         458   4107
+2017-09-05 19:42:08,765 [MainThread  ] [INFO ]  {8: 5536.0}
+2017-09-05 19:42:08,908 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   6293   6293
+unique    96      2
+top     B003   TRUE
+freq    1300   4107
+2017-09-05 19:42:11,915 [MainThread  ] [INFO ]  {8: 3735.0}
+2017-09-05 19:42:12,063 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      6293   6293
+unique      195      2
+top     PCN0005   TRUE
+freq       1026   4107
+2017-09-05 19:42:14,497 [MainThread  ] [INFO ]  {8: 4118.0}
+2017-09-05 19:42:14,641 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     6293   6293
+unique      46      2
+top     State2   TRUE
+freq      1370   4107
+2017-09-05 19:42:20,057 [MainThread  ] [INFO ]  {8: 3271.0}
+2017-09-05 19:42:20,267 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       6293      6293  6293     6293        ...           
+unique        77       834    96      195        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq        1032       458  1300     1026        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      6293                  6293   
+unique                        8                     8   
+top                           0                     1   
+freq                       3820                  3415   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           6293             6293             6293   
+unique                             8                8                8   
+top                                0                2                0   
+freq                            3831             3877             4059   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    6293                   6293             6293   
+unique                      8                      8                8   
+top                         1                      0                1   
+freq                     3178                   3848             2337   
+
+        pcn_cluster_num  state_cluster_num  
+count              6293               6293  
+unique                8                  8  
+top                   0                  0  
+freq               3496               2459  
+
+[4 rows x 23 columns]
+2017-09-05 19:42:20,299 [MainThread  ] [INFO ]          target  drug_cluster_num  drugsubclass_cluster_num  \
+count     6293              6293                      6293   
+unique       2                 8                         8   
+top          1                 0                         0   
+freq      4107              4130                      3820   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    6293                          6293             6293   
+unique                      8                             8                8   
+top                         1                             0                2   
+freq                     3415                          3831             3877   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              6293                   6293                   6293   
+unique                8                      8                      8   
+top                   0                      1                      0   
+freq               4059                   3178                   3848   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              6293             6293               6293  
+unique                8                8                  8  
+top                   1                0                  0  
+freq               2337             3496               2459  
+2017-09-05 19:42:20,321 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+4562                   1                   0                   0   
+3365                   0                   1                   0   
+2709                   1                   0                   0   
+2357                   0                   1                   0   
+6962                   1                   0                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+4562                   0                   0                   0   
+3365                   0                   0                   0   
+2709                   0                   0                   0   
+2357                   0                   0                   0   
+6962                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+4562                   0                   0                           1   
+3365                   0                   0                           0   
+2709                   0                   0                           1   
+2357                   0                   0                           0   
+6962                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+4562                           0         ...                           0   
+3365                           0         ...                           0   
+2709                           0         ...                           0   
+2357                           0         ...                           0   
+6962                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+4562                  0                    1                    0   
+3365                  0                    0                    0   
+2709                  0                    1                    0   
+2357                  0                    0                    0   
+6962                  0                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+4562                    0                    0                    0   
+3365                    1                    0                    0   
+2709                    0                    0                    0   
+2357                    1                    0                    0   
+6962                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+4562                    0                    0                    0  
+3365                    0                    0                    0  
+2709                    0                    0                    0  
+2357                    0                    0                    0  
+6962                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:42:20,343 [MainThread  ] [INFO ]  Create Random Forest Model
+2017-09-05 19:42:22,950 [MainThread  ] [INFO ]  Scores after performing cross validation :: [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.]
+2017-09-05 19:42:23,008 [MainThread  ] [INFO ]  describe y_pred_train before save :: [0 1]
+2017-09-05 19:42:23,008 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:42:23,012 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:42:23,062 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:42:23,111 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 1.  0.  1. ...,  0.  1.  0.]
+2017-09-05 19:42:23,112 [MainThread  ] [INFO ]  describe y_pred_train :: [0 1]
+2017-09-05 19:42:23,419 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:23,541 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:23,541 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:23,862 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:23,862 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:42:24,050 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is train]=======================
+2017-09-05 19:42:24,051 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:24,052 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:24,052 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:24,054 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:24,055 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:24,057 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:24,057 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:24,059 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:24,059 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:24,447 [MainThread  ] [INFO ]  Build Neural Net Model
+2017-09-05 19:42:24,610 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:42:24,611 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:42:24,616 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:42:24,621 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99999176e-01   6.19682232e-05   1.00000000e+00 ...,   6.19682232e-05
+   9.99999972e-01   6.19682232e-05]
+2017-09-05 19:42:24,971 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:25,094 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:25,094 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:25,416 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:25,416 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:42:25,610 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is train]=======================
+2017-09-05 19:42:25,610 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:25,612 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:25,612 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:25,616 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:25,616 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:25,618 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:25,619 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:25,622 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:25,622 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:25,878 [MainThread  ] [INFO ]  Build SVM Model
+2017-09-05 19:42:26,194 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:42:26,195 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:42:26,225 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:42:26,258 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99997208e-01   4.66151852e-04   9.99999963e-01 ...,   2.79530437e-04
+   9.99999430e-01   4.66151852e-04]
+2017-09-05 19:42:26,562 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:26,680 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:26,680 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:27,004 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:27,004 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:42:27,192 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is train]=======================
+2017-09-05 19:42:27,192 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:27,194 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:27,194 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:27,197 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:27,197 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:27,199 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:27,199 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:27,202 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:27,202 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:27,508 [MainThread  ] [INFO ]  Build Naives Bayes Model
+2017-09-05 19:42:27,585 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:42:27,586 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:42:27,591 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:42:27,597 [MainThread  ] [INFO ]  y_pred probabilities is :: [  1.00000000e+00   1.01708967e-36   1.00000000e+00 ...,   9.26333974e-38
+   1.00000000e+00   1.01708967e-36]
+2017-09-05 19:42:27,951 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:28,071 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:28,072 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:42:28,394 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:28,394 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:42:28,584 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is train]=======================
+2017-09-05 19:42:28,584 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:28,585 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:28,586 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:28,588 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:28,588 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:28,590 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:28,590 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:28,593 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:42:28,593 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:28,824 [MainThread  ] [INFO ]  training complete...
+2017-09-05 19:42:28,824 [MainThread  ] [INFO ]  evaluate the models on the test data
+2017-09-05 19:42:28,860 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:42:28,873 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:42:28,890 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:42:28,929 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:42:28,944 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:42:28,957 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      3101   3101
+unique      630      3
+top     Drug019   TRUE
+freq        118   2068
+2017-09-05 19:42:31,590 [MainThread  ] [INFO ]  {8: 2862.0}
+2017-09-05 19:42:31,742 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          3101   3101
+unique          281      3
+top          DSC016   TRUE
+freq            194   2068
+2017-09-05 19:42:35,531 [MainThread  ] [INFO ]  {8: 2620.0}
+2017-09-05 19:42:35,671 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       3101   3101
+unique       229      3
+top        DC016   TRUE
+freq         194   2068
+2017-09-05 19:42:38,341 [MainThread  ] [INFO ]  {8: 2582.0}
+2017-09-05 19:42:38,496 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              3101   3101
+unique              430      3
+top              DCN024   TRUE
+freq                142   2068
+2017-09-05 19:42:40,104 [MainThread  ] [INFO ]  {8: 2776.0}
+2017-09-05 19:42:40,282 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      3101   3101
+unique      814      3
+top     DGPI025   TRUE
+freq         92   2068
+2017-09-05 19:42:43,178 [MainThread  ] [INFO ]  {8: 2905.0}
+2017-09-05 19:42:43,350 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     3101   3101
+unique    1281      3
+top     NDC026   TRUE
+freq        89   2068
+2017-09-05 19:42:44,647 [MainThread  ] [INFO ]  {8: 2980.0}
+2017-09-05 19:42:44,876 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       3101   3101
+unique        78      3
+top        DG004   TRUE
+freq         516   2068
+2017-09-05 19:42:48,382 [MainThread  ] [INFO ]  {8: 2115.0}
+2017-09-05 19:42:48,551 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       3101   3101
+unique       693      3
+top         G060   TRUE
+freq         219   2068
+2017-09-05 19:42:49,741 [MainThread  ] [INFO ]  {8: 2725.0}
+2017-09-05 19:42:49,882 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   3101   3101
+unique    94      3
+top     B003   TRUE
+freq     627   2068
+2017-09-05 19:42:50,853 [MainThread  ] [INFO ]  {8: 1786.0}
+2017-09-05 19:42:51,000 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      3101   3101
+unique      178      3
+top     PCN0005   TRUE
+freq        539   2068
+2017-09-05 19:42:52,477 [MainThread  ] [INFO ]  {8: 1856.0}
+2017-09-05 19:42:52,643 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     3101   3101
+unique      48      3
+top     State2   TRUE
+freq       659   2068
+2017-09-05 19:42:54,689 [MainThread  ] [INFO ]  {8: 1749.0}
+2017-09-05 19:42:54,928 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       3101      3101  3101     3101        ...           
+unique        78       693    94      178        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq         516       219   627      539        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      3101                  3101   
+unique                        8                     8   
+top                           0                     0   
+freq                       1893                  1932   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           3101             3101             3101   
+unique                             8                8                8   
+top                                0                0                0   
+freq                            1968             2036             2036   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    3101                   3101             3101   
+unique                      8                      8                8   
+top                         1                      0                0   
+freq                     1443                   1918             1239   
+
+        pcn_cluster_num  state_cluster_num  
+count              3101               3101  
+unique                8                  8  
+top                   0                  1  
+freq               1554               1695  
+
+[4 rows x 23 columns]
+2017-09-05 19:42:54,971 [MainThread  ] [INFO ]  test data pre-processed describe ::         target  drug_cluster_num  drugsubclass_cluster_num  \
+count     3101              3101                      3101   
+unique       2                 8                         8   
+top          1                 2                         0   
+freq      2068              1972                      1893   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    3101                          3101             3101   
+unique                      8                             8                8   
+top                         0                             0                0   
+freq                     1932                          1968             2036   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              3101                   3101                   3101   
+unique                8                      8                      8   
+top                   0                      1                      0   
+freq               2036                   1443                   1918   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              3101             3101               3101  
+unique                8                8                  8  
+top                   0                0                  1  
+freq               1239             1554               1695  
+2017-09-05 19:42:54,984 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           0         ...                           1   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    1   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    0                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    1  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:42:55,005 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:42:55,005 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:42:55,007 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:42:55,011 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 1.          0.76352964  0.6065347  ...,  1.          0.99999767  1.        ]
+2017-09-05 19:42:55,369 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 478  555]
+ [   2 2066]]
+2017-09-05 19:42:55,520 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:55,521 [MainThread  ] [INFO ]  [[ 478  555]
+ [   2 2066]]
+2017-09-05 19:42:55,897 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:55,898 [MainThread  ] [INFO ]  [[  4.62729913e-01   5.37270087e-01]
+ [  9.67117988e-04   9.99032882e-01]]
+2017-09-05 19:42:56,091 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is test]=======================
+2017-09-05 19:42:56,091 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:56,092 [MainThread  ] [INFO ]  0.820380522412
+2017-09-05 19:42:56,093 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:56,095 [MainThread  ] [INFO ]  0.999032882012
+2017-09-05 19:42:56,096 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:56,098 [MainThread  ] [INFO ]  0.788248760015
+2017-09-05 19:42:56,098 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:56,101 [MainThread  ] [INFO ]  0.881211345703
+2017-09-05 19:42:56,101 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:56,383 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           0         ...                           1   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    1   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    0                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    1  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:42:56,409 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:42:56,415 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:42:56,448 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:42:56,480 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.81  0.59  0.59 ...,  0.66  0.55  0.65]
+2017-09-05 19:42:56,789 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 216  817]
+ [  11 2057]]
+2017-09-05 19:42:56,917 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:56,917 [MainThread  ] [INFO ]  [[ 216  817]
+ [  11 2057]]
+2017-09-05 19:42:57,408 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:57,408 [MainThread  ] [INFO ]  [[ 0.20909971  0.79090029]
+ [ 0.00531915  0.99468085]]
+2017-09-05 19:42:57,611 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is test]=======================
+2017-09-05 19:42:57,611 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:57,613 [MainThread  ] [INFO ]  0.732989358272
+2017-09-05 19:42:57,613 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:57,617 [MainThread  ] [INFO ]  0.994680851064
+2017-09-05 19:42:57,617 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:57,619 [MainThread  ] [INFO ]  0.715727209464
+2017-09-05 19:42:57,620 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:57,622 [MainThread  ] [INFO ]  0.832456495346
+2017-09-05 19:42:57,622 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:57,923 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           0         ...                           1   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    1   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    0                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    1  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:42:57,949 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:42:57,951 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:42:57,954 [MainThread  ] [INFO ]  y_pred is :: [1 0 0 ..., 1 1 1]
+2017-09-05 19:42:57,958 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.99999977  0.07733246  0.28933172 ...,  0.9997162   0.56156625
+  0.99998246]
+2017-09-05 19:42:58,372 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 923  110]
+ [   7 2061]]
+2017-09-05 19:42:58,502 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:58,503 [MainThread  ] [INFO ]  [[ 923  110]
+ [   7 2061]]
+2017-09-05 19:42:58,942 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:42:58,943 [MainThread  ] [INFO ]  [[ 0.89351404  0.10648596]
+ [ 0.00338491  0.99661509]]
+2017-09-05 19:42:59,138 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is test]=======================
+2017-09-05 19:42:59,138 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:42:59,139 [MainThread  ] [INFO ]  0.962270235408
+2017-09-05 19:42:59,139 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:42:59,141 [MainThread  ] [INFO ]  0.996615087041
+2017-09-05 19:42:59,141 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:42:59,143 [MainThread  ] [INFO ]  0.949332105021
+2017-09-05 19:42:59,144 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:42:59,146 [MainThread  ] [INFO ]  0.972399150743
+2017-09-05 19:42:59,146 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:42:59,410 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           0         ...                           1   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    1   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    0                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    1  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:42:59,434 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:42:59,435 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:42:59,449 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 1 1]
+2017-09-05 19:42:59,465 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.99998221  0.6669034   0.65546936 ...,  0.96576338  0.82814254
+  0.98449158]
+2017-09-05 19:42:59,840 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 200  833]
+ [   2 2066]]
+2017-09-05 19:42:59,989 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:42:59,989 [MainThread  ] [INFO ]  [[ 200  833]
+ [   2 2066]]
+2017-09-05 19:43:00,524 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:43:00,525 [MainThread  ] [INFO ]  [[  1.93610842e-01   8.06389158e-01]
+ [  9.67117988e-04   9.99032882e-01]]
+2017-09-05 19:43:00,762 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is test]=======================
+2017-09-05 19:43:00,762 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:43:00,764 [MainThread  ] [INFO ]  0.730732021928
+2017-09-05 19:43:00,764 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:43:00,768 [MainThread  ] [INFO ]  0.999032882012
+2017-09-05 19:43:00,768 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:43:00,770 [MainThread  ] [INFO ]  0.712659537772
+2017-09-05 19:43:00,771 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:43:00,773 [MainThread  ] [INFO ]  0.831890477149
+2017-09-05 19:43:00,773 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:43:01,097 [MainThread  ] [INFO ]  testing complete...
+2017-09-05 19:48:04,204 [MainThread  ] [INFO ]  (6293, 15)
+2017-09-05 19:48:04,236 [MainThread  ] [INFO ]  (3101, 15)
+2017-09-05 19:48:04,237 [MainThread  ] [INFO ]  Preprocess the train data with approach 2 and create various models
+2017-09-05 19:48:04,282 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:48:04,295 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:48:04,314 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:48:04,357 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:48:04,371 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:48:04,385 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      6293   6293
+unique      733      2
+top     Drug024   TRUE
+freq        197   4107
+2017-09-05 19:48:07,605 [MainThread  ] [INFO ]  {8: 5849.0}
+2017-09-05 19:48:09,641 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          6293   6293
+unique          308      2
+top          DSC016   TRUE
+freq            422   4107
+2017-09-05 19:48:16,840 [MainThread  ] [INFO ]  {8: 5346.0}
+2017-09-05 19:48:16,976 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       6293   6293
+unique       247      2
+top        DC016   TRUE
+freq         422   4107
+2017-09-05 19:48:20,075 [MainThread  ] [INFO ]  {8: 5331.0}
+2017-09-05 19:48:20,218 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              6293   6293
+unique              485      2
+top              DCN024   TRUE
+freq                279   4107
+2017-09-05 19:48:22,803 [MainThread  ] [INFO ]  {8: 5739.0}
+2017-09-05 19:48:22,993 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      6293   6293
+unique      965      2
+top     DGPI025   TRUE
+freq        185   4107
+2017-09-05 19:48:25,821 [MainThread  ] [INFO ]  {8: 5934.0}
+2017-09-05 19:48:25,963 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     6293   6293
+unique    1578      2
+top     NDC026   TRUE
+freq       182   4107
+2017-09-05 19:48:30,997 [MainThread  ] [INFO ]  {8: 6001.0}
+2017-09-05 19:48:31,144 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       6293   6293
+unique        77      2
+top        DG004   TRUE
+freq        1032   4107
+2017-09-05 19:48:33,641 [MainThread  ] [INFO ]  {8: 4694.0}
+2017-09-05 19:48:33,779 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       6293   6293
+unique       834      2
+top         G060   TRUE
+freq         458   4107
+2017-09-05 19:48:36,914 [MainThread  ] [INFO ]  {8: 5341.0}
+2017-09-05 19:48:37,075 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   6293   6293
+unique    96      2
+top     B003   TRUE
+freq    1300   4107
+2017-09-05 19:48:40,736 [MainThread  ] [INFO ]  {8: 3818.0}
+2017-09-05 19:48:40,901 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      6293   6293
+unique      195      2
+top     PCN0005   TRUE
+freq       1026   4107
+2017-09-05 19:48:46,311 [MainThread  ] [INFO ]  {8: 3905.0}
+2017-09-05 19:48:46,457 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     6293   6293
+unique      46      2
+top     State2   TRUE
+freq      1370   4107
+2017-09-05 19:48:51,555 [MainThread  ] [INFO ]  {8: 2847.0}
+2017-09-05 19:48:51,768 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       6293      6293  6293     6293        ...           
+unique        77       834    96      195        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq        1032       458  1300     1026        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      6293                  6293   
+unique                        8                     8   
+top                           1                     0   
+freq                       3699                  3813   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           6293             6293             6293   
+unique                             8                8                8   
+top                                0                0                1   
+freq                            3832             4004             4055   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    6293                   6293             6293   
+unique                      8                      8                8   
+top                         1                      0                0   
+freq                     3556                   3714             2755   
+
+        pcn_cluster_num  state_cluster_num  
+count              6293               6293  
+unique                8                  8  
+top                   1                  0  
+freq               3177               1977  
+
+[4 rows x 23 columns]
+2017-09-05 19:48:51,799 [MainThread  ] [INFO ]          target  drug_cluster_num  drugsubclass_cluster_num  \
+count     6293              6293                      6293   
+unique       2                 8                         8   
+top          1                 2                         1   
+freq      4107              3952                      3699   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    6293                          6293             6293   
+unique                      8                             8                8   
+top                         0                             0                0   
+freq                     3813                          3832             4004   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              6293                   6293                   6293   
+unique                8                      8                      8   
+top                   1                      1                      0   
+freq               4055                   3556                   3714   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              6293             6293               6293  
+unique                8                8                  8  
+top                   0                1                  0  
+freq               2755             3177               1977  
+2017-09-05 19:48:51,820 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+4562                   0                   0                   0   
+3365                   1                   0                   0   
+2709                   0                   0                   1   
+2357                   1                   0                   0   
+6962                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+4562                   0                   0                   0   
+3365                   0                   0                   0   
+2709                   0                   0                   0   
+2357                   0                   0                   0   
+6962                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+4562                   0                   1                           0   
+3365                   0                   0                           1   
+2709                   0                   0                           0   
+2357                   0                   0                           1   
+6962                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+4562                           1         ...                           0   
+3365                           0         ...                           1   
+2709                           1         ...                           0   
+2357                           0         ...                           0   
+6962                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+4562                  0                    0                    0   
+3365                  0                    0                    0   
+2709                  0                    1                    0   
+2357                  0                    0                    1   
+6962                  0                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+4562                    0                    0                    0   
+3365                    0                    0                    0   
+2709                    0                    0                    0   
+2357                    0                    0                    0   
+6962                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+4562                    1                    0                    0  
+3365                    0                    0                    1  
+2709                    0                    0                    0  
+2357                    0                    0                    0  
+6962                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:48:51,842 [MainThread  ] [INFO ]  Create Random Forest Model
+2017-09-05 19:48:54,465 [MainThread  ] [INFO ]  Scores after performing cross validation :: [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.]
+2017-09-05 19:48:54,521 [MainThread  ] [INFO ]  describe y_pred_train before save :: [0 1]
+2017-09-05 19:48:54,521 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:48:54,526 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:48:54,574 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:48:54,625 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 1.  0.  1. ...,  0.  1.  0.]
+2017-09-05 19:48:54,625 [MainThread  ] [INFO ]  describe y_pred_train :: [0 1]
+2017-09-05 19:48:54,930 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:55,063 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:48:55,063 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:55,417 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:48:55,417 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:48:55,604 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is train]=======================
+2017-09-05 19:48:55,605 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:48:55,606 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:55,606 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:48:55,608 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:55,609 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:48:55,611 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:55,611 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:48:55,613 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:55,613 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:48:55,912 [MainThread  ] [INFO ]  Build Neural Net Model
+2017-09-05 19:48:56,211 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:48:56,212 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:48:56,218 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:48:56,223 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99957991e-01   1.15010128e-04   9.99996717e-01 ...,   1.44575652e-05
+   9.99940025e-01   8.53942371e-05]
+2017-09-05 19:48:56,547 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:56,668 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:48:56,668 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:56,985 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:48:56,985 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:48:57,192 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is train]=======================
+2017-09-05 19:48:57,192 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:48:57,193 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:57,194 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:48:57,196 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:57,196 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:48:57,199 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:57,199 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:48:57,201 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:57,202 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:48:57,420 [MainThread  ] [INFO ]  Build SVM Model
+2017-09-05 19:48:57,837 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:48:57,839 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:48:57,876 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:48:57,916 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99998618e-01   6.37844446e-04   9.99999889e-01 ...,   5.01676188e-04
+   9.99998133e-01   1.31433816e-03]
+2017-09-05 19:48:58,207 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:58,333 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:48:58,334 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:58,657 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:48:58,657 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:48:58,843 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is train]=======================
+2017-09-05 19:48:58,843 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:48:58,844 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:58,845 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:48:58,847 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:58,847 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:48:58,849 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:58,850 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:48:58,852 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:48:58,852 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:48:59,156 [MainThread  ] [INFO ]  Build Naives Bayes Model
+2017-09-05 19:48:59,165 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:48:59,166 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:48:59,171 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:48:59,178 [MainThread  ] [INFO ]  y_pred probabilities is :: [  1.00000000e+00   7.82341229e-34   1.00000000e+00 ...,   9.12621584e-33
+   1.00000000e+00   3.01215206e-31]
+2017-09-05 19:48:59,520 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:59,642 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:48:59,643 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:48:59,960 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:48:59,960 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:49:00,159 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is train]=======================
+2017-09-05 19:49:00,160 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:49:00,161 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:49:00,162 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:49:00,165 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:49:00,165 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:49:00,169 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:49:00,170 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:49:00,174 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:49:00,174 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:49:00,397 [MainThread  ] [INFO ]  training complete...
+2017-09-05 19:49:00,397 [MainThread  ] [INFO ]  evaluate the models on the test data
+2017-09-05 19:49:00,463 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:49:00,483 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:49:00,501 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:49:00,553 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:49:00,569 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:49:00,583 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      3101   3101
+unique      630      3
+top     Drug019   TRUE
+freq        118   2068
+2017-09-05 19:49:04,689 [MainThread  ] [INFO ]  {8: 2846.0}
+2017-09-05 19:49:04,830 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          3101   3101
+unique          281      3
+top          DSC016   TRUE
+freq            194   2068
+2017-09-05 19:49:07,535 [MainThread  ] [INFO ]  {8: 2576.0}
+2017-09-05 19:49:07,678 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       3101   3101
+unique       229      3
+top        DC016   TRUE
+freq         194   2068
+2017-09-05 19:49:09,278 [MainThread  ] [INFO ]  {8: 2651.0}
+2017-09-05 19:49:09,428 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              3101   3101
+unique              430      3
+top              DCN024   TRUE
+freq                142   2068
+2017-09-05 19:49:11,034 [MainThread  ] [INFO ]  {8: 2816.0}
+2017-09-05 19:49:11,175 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      3101   3101
+unique      814      3
+top     DGPI025   TRUE
+freq         92   2068
+2017-09-05 19:49:12,559 [MainThread  ] [INFO ]  {8: 2933.0}
+2017-09-05 19:49:12,702 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     3101   3101
+unique    1281      3
+top     NDC026   TRUE
+freq        89   2068
+2017-09-05 19:49:14,709 [MainThread  ] [INFO ]  {8: 2945.0}
+2017-09-05 19:49:14,932 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       3101   3101
+unique        78      3
+top        DG004   TRUE
+freq         516   2068
+2017-09-05 19:49:16,322 [MainThread  ] [INFO ]  {8: 2171.0}
+2017-09-05 19:49:16,458 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       3101   3101
+unique       693      3
+top         G060   TRUE
+freq         219   2068
+2017-09-05 19:49:20,056 [MainThread  ] [INFO ]  {8: 2702.0}
+2017-09-05 19:49:20,198 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   3101   3101
+unique    94      3
+top     B003   TRUE
+freq     627   2068
+2017-09-05 19:49:21,452 [MainThread  ] [INFO ]  {8: 1739.0}
+2017-09-05 19:49:21,596 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      3101   3101
+unique      178      3
+top     PCN0005   TRUE
+freq        539   2068
+2017-09-05 19:49:23,420 [MainThread  ] [INFO ]  {8: 1950.0}
+2017-09-05 19:49:23,564 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     3101   3101
+unique      48      3
+top     State2   TRUE
+freq       659   2068
+2017-09-05 19:49:26,155 [MainThread  ] [INFO ]  {8: 1827.0}
+2017-09-05 19:49:26,359 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       3101      3101  3101     3101        ...           
+unique        78       693    94      178        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq         516       219   627      539        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      3101                  3101   
+unique                        8                     8   
+top                           1                     0   
+freq                       1777                  2037   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           3101             3101             3101   
+unique                             8                8                8   
+top                                0                0                2   
+freq                            2026             2027             2041   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    3101                   3101             3101   
+unique                      8                      8                8   
+top                         1                      1                0   
+freq                     1712                   1827             1292   
+
+        pcn_cluster_num  state_cluster_num  
+count              3101               3101  
+unique                8                  8  
+top                   0                  0  
+freq               1456               1235  
+
+[4 rows x 23 columns]
+2017-09-05 19:49:26,394 [MainThread  ] [INFO ]  test data pre-processed describe ::         target  drug_cluster_num  drugsubclass_cluster_num  \
+count     3101              3101                      3101   
+unique       2                 8                         8   
+top          1                 2                         1   
+freq      2068              1944                      1777   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    3101                          3101             3101   
+unique                      8                             8                8   
+top                         0                             0                0   
+freq                     2037                          2026             2027   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              3101                   3101                   3101   
+unique                8                      8                      8   
+top                   2                      1                      1   
+freq               2041                   1712                   1827   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              3101             3101               3101  
+unique                8                8                  8  
+top                   0                0                  0  
+freq               1292             1456               1235  
+2017-09-05 19:49:26,406 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           0   
+8295                   0                   0                           1   
+1731                   0                   0                           1   
+6423                   0                   0                           0   
+8706                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           1         ...                           0   
+8706                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    0   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    1                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:49:26,425 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:49:26,426 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:49:26,428 [MainThread  ] [INFO ]  y_pred is :: [1 0 0 ..., 1 0 0]
+2017-09-05 19:49:26,431 [MainThread  ] [INFO ]  y_pred probabilities is :: [  1.00000000e+00   1.02340212e-03   1.02340212e-03 ...,   1.00000000e+00
+   7.38676597e-14   3.97516389e-01]
+2017-09-05 19:49:26,747 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 619  414]
+ [  95 1973]]
+2017-09-05 19:49:26,867 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:49:26,867 [MainThread  ] [INFO ]  [[ 619  414]
+ [  95 1973]]
+2017-09-05 19:49:27,173 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:49:27,173 [MainThread  ] [INFO ]  [[ 0.59922556  0.40077444]
+ [ 0.0459381   0.9540619 ]]
+2017-09-05 19:49:27,356 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is test]=======================
+2017-09-05 19:49:27,356 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:49:27,357 [MainThread  ] [INFO ]  0.835859400193
+2017-09-05 19:49:27,357 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:49:27,359 [MainThread  ] [INFO ]  0.954061895551
+2017-09-05 19:49:27,359 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:49:27,360 [MainThread  ] [INFO ]  0.826560536238
+2017-09-05 19:49:27,361 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:49:27,362 [MainThread  ] [INFO ]  0.885746352413
+2017-09-05 19:49:27,362 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:49:27,630 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           0   
+8295                   0                   0                           1   
+1731                   0                   0                           1   
+6423                   0                   0                           0   
+8706                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           1         ...                           0   
+8706                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    0   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    1                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:49:27,704 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:49:27,708 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:49:27,741 [MainThread  ] [INFO ]  y_pred is :: [1 0 0 ..., 1 0 1]
+2017-09-05 19:49:27,772 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.82  0.47  0.47 ...,  0.75  0.41  0.69]
+2017-09-05 19:49:28,170 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 749  284]
+ [  27 2041]]
+2017-09-05 19:49:28,305 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:49:28,305 [MainThread  ] [INFO ]  [[ 749  284]
+ [  27 2041]]
+2017-09-05 19:49:28,641 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:49:28,641 [MainThread  ] [INFO ]  [[ 0.7250726   0.2749274 ]
+ [ 0.01305609  0.98694391]]
+2017-09-05 19:49:28,829 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is test]=======================
+2017-09-05 19:49:28,829 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:49:28,830 [MainThread  ] [INFO ]  0.899709771042
+2017-09-05 19:49:28,830 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:49:28,832 [MainThread  ] [INFO ]  0.986943907157
+2017-09-05 19:49:28,833 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:49:28,835 [MainThread  ] [INFO ]  0.877849462366
+2017-09-05 19:49:28,836 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:49:28,838 [MainThread  ] [INFO ]  0.929205554291
+2017-09-05 19:49:28,839 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:49:29,070 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           0   
+8295                   0                   0                           1   
+1731                   0                   0                           1   
+6423                   0                   0                           0   
+8706                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           1         ...                           0   
+8706                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    0   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    1                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:49:29,095 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:49:29,096 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:49:29,136 [MainThread  ] [INFO ]  y_pred is :: [1 0 0 ..., 1 0 1]
+2017-09-05 19:49:29,139 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.98868764  0.01277213  0.01277213 ...,  0.9987837   0.14082183
+  0.92618779]
+2017-09-05 19:49:29,486 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 879  154]
+ [  29 2039]]
+2017-09-05 19:49:29,669 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:49:29,669 [MainThread  ] [INFO ]  [[ 879  154]
+ [  29 2039]]
+2017-09-05 19:49:29,996 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:49:29,996 [MainThread  ] [INFO ]  [[ 0.85091965  0.14908035]
+ [ 0.01402321  0.98597679]]
+2017-09-05 19:49:30,185 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is test]=======================
+2017-09-05 19:49:30,185 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:49:30,186 [MainThread  ] [INFO ]  0.940986778459
+2017-09-05 19:49:30,186 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:49:30,188 [MainThread  ] [INFO ]  0.985976789168
+2017-09-05 19:49:30,188 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:49:30,190 [MainThread  ] [INFO ]  0.929776561788
+2017-09-05 19:49:30,190 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:49:30,192 [MainThread  ] [INFO ]  0.957052335133
+2017-09-05 19:49:30,192 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:49:30,460 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   0                   1   
+8706                   0                   0                   1   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           0   
+8295                   0                   0                           1   
+1731                   0                   0                           1   
+6423                   0                   0                           0   
+8706                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           0         ...                           0   
+1731                           0         ...                           0   
+6423                           1         ...                           0   
+8706                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  0                    0                    0   
+8295                  0                    1                    0   
+1731                  0                    1                    0   
+6423                  0                    0                    0   
+8706                  0                    0                    1   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    1                    0   
+8295                    0                    0                    0   
+1731                    0                    0                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:49:30,504 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:49:30,505 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:49:30,528 [MainThread  ] [INFO ]  y_pred is :: [1 0 0 ..., 1 0 1]
+2017-09-05 19:49:30,550 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.97037286  0.36032645  0.36032645 ...,  0.98550354  0.23158219
+  0.88771227]
+2017-09-05 19:49:30,858 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 893  140]
+ [  32 2036]]
+2017-09-05 19:49:30,988 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:49:30,988 [MainThread  ] [INFO ]  [[ 893  140]
+ [  32 2036]]
+2017-09-05 19:49:31,412 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:49:31,413 [MainThread  ] [INFO ]  [[ 0.86447241  0.13552759]
+ [ 0.01547389  0.98452611]]
+2017-09-05 19:49:31,596 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is test]=======================
+2017-09-05 19:49:31,596 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:49:31,598 [MainThread  ] [INFO ]  0.944534021283
+2017-09-05 19:49:31,598 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:49:31,600 [MainThread  ] [INFO ]  0.984526112186
+2017-09-05 19:49:31,601 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:49:31,604 [MainThread  ] [INFO ]  0.935661764706
+2017-09-05 19:49:31,604 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:49:31,606 [MainThread  ] [INFO ]  0.959472196041
+2017-09-05 19:49:31,607 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:49:31,858 [MainThread  ] [INFO ]  testing complete...
+2017-09-05 19:53:51,072 [MainThread  ] [INFO ]  (6293, 15)
+2017-09-05 19:53:51,072 [MainThread  ] [INFO ]  (3101, 15)
+2017-09-05 19:53:51,072 [MainThread  ] [INFO ]  Preprocess the train data with approach 2 and create various models
+2017-09-05 19:53:51,118 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:53:51,132 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:53:51,154 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:53:51,206 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       6293      6293  6293     6293    6293   6293  
+unique        77       834    96      195      46      2  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq        1032       458  1300     1026    1370   4107  
+2017-09-05 19:53:51,219 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:53:51,234 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      6293   6293
+unique      733      2
+top     Drug024   TRUE
+freq        197   4107
+2017-09-05 19:54:03,814 [MainThread  ] [INFO ]  {8: 5899.0}
+2017-09-05 19:54:04,110 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          6293   6293
+unique          308      2
+top          DSC016   TRUE
+freq            422   4107
+2017-09-05 19:54:11,298 [MainThread  ] [INFO ]  {8: 5453.0}
+2017-09-05 19:54:11,456 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       6293   6293
+unique       247      2
+top        DC016   TRUE
+freq         422   4107
+2017-09-05 19:54:18,766 [MainThread  ] [INFO ]  {8: 5317.0}
+2017-09-05 19:54:18,908 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              6293   6293
+unique              485      2
+top              DCN024   TRUE
+freq                279   4107
+2017-09-05 19:54:24,253 [MainThread  ] [INFO ]  {8: 5709.0}
+2017-09-05 19:54:24,448 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      6293   6293
+unique      965      2
+top     DGPI025   TRUE
+freq        185   4107
+2017-09-05 19:54:33,232 [MainThread  ] [INFO ]  {8: 5956.0}
+2017-09-05 19:54:33,374 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     6293   6293
+unique    1578      2
+top     NDC026   TRUE
+freq       182   4107
+2017-09-05 19:54:35,664 [MainThread  ] [INFO ]  {8: 6043.0}
+2017-09-05 19:54:35,803 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       6293   6293
+unique        77      2
+top        DG004   TRUE
+freq        1032   4107
+2017-09-05 19:54:38,751 [MainThread  ] [INFO ]  {8: 4719.0}
+2017-09-05 19:54:38,968 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       6293   6293
+unique       834      2
+top         G060   TRUE
+freq         458   4107
+2017-09-05 19:54:44,528 [MainThread  ] [INFO ]  {8: 5477.0}
+2017-09-05 19:54:44,675 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   6293   6293
+unique    96      2
+top     B003   TRUE
+freq    1300   4107
+2017-09-05 19:54:47,405 [MainThread  ] [INFO ]  {8: 3569.0}
+2017-09-05 19:54:47,557 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      6293   6293
+unique      195      2
+top     PCN0005   TRUE
+freq       1026   4107
+2017-09-05 19:54:53,304 [MainThread  ] [INFO ]  {8: 3839.0}
+2017-09-05 19:54:53,449 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     6293   6293
+unique      46      2
+top     State2   TRUE
+freq      1370   4107
+2017-09-05 19:54:58,863 [MainThread  ] [INFO ]  {8: 2628.0}
+2017-09-05 19:54:59,078 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      6293         6293      6293             6293     6293    6293   
+unique      733          308       247              485      965    1578   
+top     Drug024       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        197          422       422              279      185     182   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       6293      6293  6293     6293        ...           
+unique        77       834    96      195        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq        1032       458  1300     1026        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      6293                  6293   
+unique                        8                     8   
+top                           1                     0   
+freq                       3683                  3885   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           6293             6293             6293   
+unique                             8                8                8   
+top                                0                1                0   
+freq                            4009             3892             4053   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    6293                   6293             6293   
+unique                      8                      8                8   
+top                         1                      0                1   
+freq                     3459                   3749             2053   
+
+        pcn_cluster_num  state_cluster_num  
+count              6293               6293  
+unique                8                  8  
+top                   0                  2  
+freq               2725               2037  
+
+[4 rows x 23 columns]
+2017-09-05 19:54:59,109 [MainThread  ] [INFO ]          target  drug_cluster_num  drugsubclass_cluster_num  \
+count     6293              6293                      6293   
+unique       2                 8                         8   
+top          1                 1                         1   
+freq      4107              3917                      3683   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    6293                          6293             6293   
+unique                      8                             8                8   
+top                         0                             0                1   
+freq                     3885                          4009             3892   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              6293                   6293                   6293   
+unique                8                      8                      8   
+top                   0                      1                      0   
+freq               4053                   3459                   3749   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              6293             6293               6293  
+unique                8                8                  8  
+top                   1                0                  2  
+freq               2053             2725               2037  
+2017-09-05 19:54:59,130 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+4562                   0                   0                   0   
+3365                   1                   0                   0   
+2709                   0                   1                   0   
+2357                   1                   0                   0   
+6962                   0                   1                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+4562                   1                   0                   0   
+3365                   0                   0                   0   
+2709                   0                   0                   0   
+2357                   0                   0                   0   
+6962                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+4562                   0                   0                           0   
+3365                   0                   0                           1   
+2709                   0                   0                           0   
+2357                   0                   0                           1   
+6962                   0                   0                           0   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+4562                           1         ...                           0   
+3365                           0         ...                           0   
+2709                           1         ...                           0   
+2357                           0         ...                           0   
+6962                           1         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+4562                  0                    0                    0   
+3365                  0                    0                    0   
+2709                  0                    0                    0   
+2357                  0                    1                    0   
+6962                  0                    0                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+4562                    0                    0                    1   
+3365                    0                    0                    0   
+2709                    1                    0                    0   
+2357                    0                    0                    0   
+6962                    1                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+4562                    0                    0                    0  
+3365                    1                    0                    0  
+2709                    0                    0                    0  
+2357                    0                    0                    0  
+6962                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:54:59,151 [MainThread  ] [INFO ]  Create Random Forest Model
+2017-09-05 19:55:01,797 [MainThread  ] [INFO ]  Scores after performing cross validation :: [ 1.  1.  1.  1.  1.  1.  1.  1.  1.  1.]
+2017-09-05 19:55:01,852 [MainThread  ] [INFO ]  describe y_pred_train before save :: [0 1]
+2017-09-05 19:55:01,852 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:55:01,857 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:55:01,906 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:55:01,955 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 1.  0.  1. ...,  0.  1.  0.]
+2017-09-05 19:55:01,955 [MainThread  ] [INFO ]  describe y_pred_train :: [0 1]
+2017-09-05 19:55:02,269 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:02,401 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:02,401 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:02,725 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:02,725 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:55:02,911 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is train]=======================
+2017-09-05 19:55:02,911 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:02,912 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:02,913 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:02,915 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:02,915 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:02,917 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:02,918 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:02,920 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:02,920 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:03,211 [MainThread  ] [INFO ]  Build Neural Net Model
+2017-09-05 19:55:03,354 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:55:03,356 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:55:03,363 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:55:03,370 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99903757e-01   1.27515457e-44   9.99903757e-01 ...,   2.09186266e-54
+   9.99903757e-01   3.21172672e-48]
+2017-09-05 19:55:03,762 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:03,888 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:03,888 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:04,211 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:04,211 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:55:04,404 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is train]=======================
+2017-09-05 19:55:04,404 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:04,405 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:04,406 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:04,409 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:04,409 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:04,412 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:04,412 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:04,416 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:04,416 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:04,664 [MainThread  ] [INFO ]  Build SVM Model
+2017-09-05 19:55:05,062 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:55:05,063 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:55:05,098 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:55:05,137 [MainThread  ] [INFO ]  y_pred probabilities is :: [  9.99997526e-01   4.88543875e-04   9.99999952e-01 ...,   2.07906484e-04
+   9.99999000e-01   4.48490905e-04]
+2017-09-05 19:55:05,438 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:05,563 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:05,563 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:05,887 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:05,888 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:55:06,076 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is train]=======================
+2017-09-05 19:55:06,076 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:06,077 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:06,077 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:06,080 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:06,080 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:06,082 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:06,082 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:06,085 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:06,085 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:06,384 [MainThread  ] [INFO ]  Build Naives Bayes Model
+2017-09-05 19:55:06,393 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:55:06,394 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:55:06,398 [MainThread  ] [INFO ]  y_pred is :: [1 0 1 ..., 0 1 0]
+2017-09-05 19:55:06,405 [MainThread  ] [INFO ]  y_pred probabilities is :: [  1.00000000e+00   3.04089835e-30   1.00000000e+00 ...,   1.69939759e-33
+   1.00000000e+00   1.26624158e-30]
+2017-09-05 19:55:06,819 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:06,947 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:06,947 [MainThread  ] [INFO ]  [[2186    0]
+ [   0 4107]]
+2017-09-05 19:55:07,267 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:07,267 [MainThread  ] [INFO ]  [[ 1.  0.]
+ [ 0.  1.]]
+2017-09-05 19:55:07,455 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is train]=======================
+2017-09-05 19:55:07,455 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:07,456 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:07,457 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:07,459 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:07,459 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:07,461 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:07,461 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:07,464 [MainThread  ] [INFO ]  1.0
+2017-09-05 19:55:07,464 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:07,691 [MainThread  ] [INFO ]  training complete...
+2017-09-05 19:55:07,692 [MainThread  ] [INFO ]  evaluate the models on the test data
+2017-09-05 19:55:07,743 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:55:07,766 [MainThread  ] [INFO ]  drug                object
+drugsubclass        object
+drugclass           object
+drugchemicalname    object
+gpi                 object
+ndc                 object
+druggroup           object
+rxgroupid           object
+bin                 object
+pcn                 object
+state               object
+target              object
+dtype: object
+2017-09-05 19:55:07,784 [MainThread  ] [INFO ]  Pre-processed data frame :: 
+2017-09-05 19:55:07,843 [MainThread  ] [INFO ]             drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn   state target  
+count       3101      3101  3101     3101    3101   3101  
+unique        78       693    94      178      48      3  
+top        DG004      G060  B003  PCN0005  State2   TRUE  
+freq         516       219   627      539     659   2068  
+2017-09-05 19:55:07,860 [MainThread  ] [INFO ]  drug                category
+drugsubclass        category
+drugclass           category
+drugchemicalname    category
+gpi                 category
+ndc                 category
+druggroup           category
+rxgroupid           category
+bin                 category
+pcn                 category
+state               category
+target              category
+dtype: object
+2017-09-05 19:55:07,885 [MainThread  ] [INFO ]  feature_frame_train is  ::            drug target
+count      3101   3101
+unique      630      3
+top     Drug019   TRUE
+freq        118   2068
+2017-09-05 19:55:09,397 [MainThread  ] [INFO ]  {8: 2877.0}
+2017-09-05 19:55:09,547 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugsubclass target
+count          3101   3101
+unique          281      3
+top          DSC016   TRUE
+freq            194   2068
+2017-09-05 19:55:11,014 [MainThread  ] [INFO ]  {8: 2639.0}
+2017-09-05 19:55:11,159 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugclass target
+count       3101   3101
+unique       229      3
+top        DC016   TRUE
+freq         194   2068
+2017-09-05 19:55:15,256 [MainThread  ] [INFO ]  {8: 2579.0}
+2017-09-05 19:55:15,399 [MainThread  ] [INFO ]  feature_frame_train is  ::        drugchemicalname target
+count              3101   3101
+unique              430      3
+top              DCN024   TRUE
+freq                142   2068
+2017-09-05 19:55:17,057 [MainThread  ] [INFO ]  {8: 2792.0}
+2017-09-05 19:55:17,202 [MainThread  ] [INFO ]  feature_frame_train is  ::             gpi target
+count      3101   3101
+unique      814      3
+top     DGPI025   TRUE
+freq         92   2068
+2017-09-05 19:55:19,819 [MainThread  ] [INFO ]  {8: 2923.0}
+2017-09-05 19:55:19,964 [MainThread  ] [INFO ]  feature_frame_train is  ::            ndc target
+count     3101   3101
+unique    1281      3
+top     NDC026   TRUE
+freq        89   2068
+2017-09-05 19:55:21,178 [MainThread  ] [INFO ]  {8: 2985.0}
+2017-09-05 19:55:21,408 [MainThread  ] [INFO ]  feature_frame_train is  ::        druggroup target
+count       3101   3101
+unique        78      3
+top        DG004   TRUE
+freq         516   2068
+2017-09-05 19:55:22,749 [MainThread  ] [INFO ]  {8: 2190.0}
+2017-09-05 19:55:22,895 [MainThread  ] [INFO ]  feature_frame_train is  ::        rxgroupid target
+count       3101   3101
+unique       693      3
+top         G060   TRUE
+freq         219   2068
+2017-09-05 19:55:24,101 [MainThread  ] [INFO ]  {8: 2686.0}
+2017-09-05 19:55:24,246 [MainThread  ] [INFO ]  feature_frame_train is  ::          bin target
+count   3101   3101
+unique    94      3
+top     B003   TRUE
+freq     627   2068
+2017-09-05 19:55:26,475 [MainThread  ] [INFO ]  {8: 1898.0}
+2017-09-05 19:55:26,627 [MainThread  ] [INFO ]  feature_frame_train is  ::             pcn target
+count      3101   3101
+unique      178      3
+top     PCN0005   TRUE
+freq        539   2068
+2017-09-05 19:55:28,247 [MainThread  ] [INFO ]  {8: 1886.0}
+2017-09-05 19:55:28,391 [MainThread  ] [INFO ]  feature_frame_train is  ::          state target
+count     3101   3101
+unique      48      3
+top     State2   TRUE
+freq       659   2068
+2017-09-05 19:55:29,989 [MainThread  ] [INFO ]  {8: 1689.0}
+2017-09-05 19:55:30,212 [MainThread  ] [INFO ]  updated_df ::            drug drugsubclass drugclass drugchemicalname      gpi     ndc  \
+count      3101         3101      3101             3101     3101    3101   
+unique      630          281       229              430      814    1281   
+top     Drug019       DSC016     DC016           DCN024  DGPI025  NDC026   
+freq        118          194       194              142       92      89   
+
+       druggroup rxgroupid   bin      pcn        ...          \
+count       3101      3101  3101     3101        ...           
+unique        78       693    94      178        ...           
+top        DG004      G060  B003  PCN0005        ...           
+freq         516       219   627      539        ...           
+
+       drugsubclass_cluster_num drugclass_cluster_num  \
+count                      3101                  3101   
+unique                        8                     8   
+top                           0                     1   
+freq                       1928                  1781   
+
+        drugchemicalname_cluster_num  gpi_cluster_num  ndc_cluster_num  \
+count                           3101             3101             3101   
+unique                             8                8                8   
+top                                0                0                0   
+freq                            1992             2054             2046   
+
+        druggroup_cluster_num  rxgroupid_cluster_num  bin_cluster_num  \
+count                    3101                   3101             3101   
+unique                      8                      8                8   
+top                         1                      0                1   
+freq                     1695                   1914             1531   
+
+        pcn_cluster_num  state_cluster_num  
+count              3101               3101  
+unique                8                  8  
+top                   0                  0  
+freq               1304               1462  
+
+[4 rows x 23 columns]
+2017-09-05 19:55:30,249 [MainThread  ] [INFO ]  test data pre-processed describe ::         target  drug_cluster_num  drugsubclass_cluster_num  \
+count     3101              3101                      3101   
+unique       2                 8                         8   
+top          1                 1                         0   
+freq      2068              2004                      1928   
+
+        drugclass_cluster_num  drugchemicalname_cluster_num  gpi_cluster_num  \
+count                    3101                          3101             3101   
+unique                      8                             8                8   
+top                         1                             0                0   
+freq                     1781                          1992             2054   
+
+        ndc_cluster_num  druggroup_cluster_num  rxgroupid_cluster_num  \
+count              3101                   3101                   3101   
+unique                8                      8                      8   
+top                   0                      1                      0   
+freq               2046                   1695                   1914   
+
+        bin_cluster_num  pcn_cluster_num  state_cluster_num  
+count              3101             3101               3101  
+unique                8                8                  8  
+top                   1                0                  0  
+freq               1531             1304               1462  
+2017-09-05 19:55:30,261 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   1                   0   
+8706                   0                   1                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           1         ...                           0   
+1731                           1         ...                           0   
+6423                           0         ...                           0   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  1                    1                    0   
+8295                  0                    0                    0   
+1731                  0                    0                    0   
+6423                  0                    0                    0   
+8706                  1                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    1                    0   
+1731                    0                    1                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:55:30,282 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_naive_bayes.sav
+2017-09-05 19:55:30,283 [MainThread  ] [INFO ]  loaded model is :: MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+2017-09-05 19:55:30,285 [MainThread  ] [INFO ]  y_pred is :: [0 0 0 ..., 1 0 1]
+2017-09-05 19:55:30,288 [MainThread  ] [INFO ]  y_pred probabilities is :: [  8.96395391e-02   3.74738727e-01   3.74738727e-01 ...,   9.99998714e-01
+   3.29759495e-07   9.99934780e-01]
+2017-09-05 19:55:30,626 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 643  390]
+ [ 103 1965]]
+2017-09-05 19:55:30,753 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:30,753 [MainThread  ] [INFO ]  [[ 643  390]
+ [ 103 1965]]
+2017-09-05 19:55:31,076 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:31,076 [MainThread  ] [INFO ]  [[ 0.62245886  0.37754114]
+ [ 0.04980658  0.95019342]]
+2017-09-05 19:55:31,257 [MainThread  ] [INFO ]  ================ Evaluation metrics for model naive_bayes [Dataset is test]=======================
+2017-09-05 19:55:31,257 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:31,258 [MainThread  ] [INFO ]  0.841019026121
+2017-09-05 19:55:31,258 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:31,260 [MainThread  ] [INFO ]  0.950193423598
+2017-09-05 19:55:31,260 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:31,262 [MainThread  ] [INFO ]  0.834394904459
+2017-09-05 19:55:31,262 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:31,264 [MainThread  ] [INFO ]  0.888537191951
+2017-09-05 19:55:31,264 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:31,533 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   1                   0   
+8706                   0                   1                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           1         ...                           0   
+1731                           1         ...                           0   
+6423                           0         ...                           0   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  1                    1                    0   
+8295                  0                    0                    0   
+1731                  0                    0                    0   
+6423                  0                    0                    0   
+8706                  1                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    1                    0   
+1731                    0                    1                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:55:31,593 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_random_forest.sav
+2017-09-05 19:55:31,602 [MainThread  ] [INFO ]  loaded model is :: RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=None, max_features='auto', max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=100, n_jobs=1,
+            oob_score=False, random_state=42, verbose=0, warm_start=False)
+2017-09-05 19:55:31,698 [MainThread  ] [INFO ]  y_pred is :: [1 1 1 ..., 1 0 1]
+2017-09-05 19:55:31,751 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.53  0.57  0.57 ...,  0.6   0.43  0.59]
+2017-09-05 19:55:32,145 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 150  883]
+ [ 105 1963]]
+2017-09-05 19:55:32,276 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:32,277 [MainThread  ] [INFO ]  [[ 150  883]
+ [ 105 1963]]
+2017-09-05 19:55:32,590 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:32,591 [MainThread  ] [INFO ]  [[ 0.14520813  0.85479187]
+ [ 0.05077369  0.94922631]]
+2017-09-05 19:55:32,788 [MainThread  ] [INFO ]  ================ Evaluation metrics for model random_forest [Dataset is test]=======================
+2017-09-05 19:55:32,789 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:32,790 [MainThread  ] [INFO ]  0.681393099
+2017-09-05 19:55:32,790 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:32,793 [MainThread  ] [INFO ]  0.949226305609
+2017-09-05 19:55:32,793 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:32,796 [MainThread  ] [INFO ]  0.689739985945
+2017-09-05 19:55:32,796 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:32,798 [MainThread  ] [INFO ]  0.798941798942
+2017-09-05 19:55:32,799 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:33,055 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   1                   0   
+8706                   0                   1                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           1         ...                           0   
+1731                           1         ...                           0   
+6423                           0         ...                           0   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  1                    1                    0   
+8295                  0                    0                    0   
+1731                  0                    0                    0   
+6423                  0                    0                    0   
+8706                  1                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    1                    0   
+1731                    0                    1                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:55:33,109 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_neural_net.sav
+2017-09-05 19:55:33,110 [MainThread  ] [INFO ]  loaded model is :: MLPClassifier(activation='relu', alpha=1e-05, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(5, 2), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=200, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=1, shuffle=True,
+       solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False,
+       warm_start=False)
+2017-09-05 19:55:33,113 [MainThread  ] [INFO ]  y_pred is :: [0 0 0 ..., 0 0 0]
+2017-09-05 19:55:33,118 [MainThread  ] [INFO ]  y_pred probabilities is :: [  1.08446458e-14   6.67219009e-13   6.67219009e-13 ...,   1.23719966e-09
+   8.81627921e-15   9.10614030e-11]
+2017-09-05 19:55:33,494 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 963   70]
+ [1818  250]]
+2017-09-05 19:55:33,625 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:33,626 [MainThread  ] [INFO ]  [[ 963   70]
+ [1818  250]]
+2017-09-05 19:55:33,973 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:33,973 [MainThread  ] [INFO ]  [[ 0.93223621  0.06776379]
+ [ 0.87911025  0.12088975]]
+2017-09-05 19:55:34,186 [MainThread  ] [INFO ]  ================ Evaluation metrics for model neural_net [Dataset is test]=======================
+2017-09-05 19:55:34,187 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:34,188 [MainThread  ] [INFO ]  0.3911641406
+2017-09-05 19:55:34,189 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:34,192 [MainThread  ] [INFO ]  0.120889748549
+2017-09-05 19:55:34,192 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:34,195 [MainThread  ] [INFO ]  0.78125
+2017-09-05 19:55:34,195 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:34,197 [MainThread  ] [INFO ]  0.209380234506
+2017-09-05 19:55:34,198 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:34,513 [MainThread  ] [INFO ]        drug_cluster_num_0  drug_cluster_num_1  drug_cluster_num_2  \
+2221                   0                   0                   1   
+8295                   1                   0                   0   
+1731                   1                   0                   0   
+6423                   0                   1                   0   
+8706                   0                   1                   0   
+
+      drug_cluster_num_3  drug_cluster_num_4  drug_cluster_num_5  \
+2221                   0                   0                   0   
+8295                   0                   0                   0   
+1731                   0                   0                   0   
+6423                   0                   0                   0   
+8706                   0                   0                   0   
+
+      drug_cluster_num_6  drug_cluster_num_7  drugsubclass_cluster_num_0  \
+2221                   0                   0                           1   
+8295                   0                   0                           0   
+1731                   0                   0                           0   
+6423                   0                   0                           1   
+8706                   0                   0                           1   
+
+      drugsubclass_cluster_num_1         ...           pcn_cluster_num_6  \
+2221                           0         ...                           0   
+8295                           1         ...                           0   
+1731                           1         ...                           0   
+6423                           0         ...                           0   
+8706                           0         ...                           0   
+
+      pcn_cluster_num_7  state_cluster_num_0  state_cluster_num_1  \
+2221                  1                    1                    0   
+8295                  0                    0                    0   
+1731                  0                    0                    0   
+6423                  0                    0                    0   
+8706                  1                    1                    0   
+
+      state_cluster_num_2  state_cluster_num_3  state_cluster_num_4  \
+2221                    0                    0                    0   
+8295                    0                    1                    0   
+1731                    0                    1                    0   
+6423                    1                    0                    0   
+8706                    0                    0                    0   
+
+      state_cluster_num_5  state_cluster_num_6  state_cluster_num_7  
+2221                    0                    0                    0  
+8295                    0                    0                    0  
+1731                    0                    0                    0  
+6423                    0                    0                    0  
+8706                    0                    0                    0  
+
+[5 rows x 88 columns]
+2017-09-05 19:55:34,555 [MainThread  ] [INFO ]  model file path is :: ../models/preprocess2/model_svm.sav
+2017-09-05 19:55:34,556 [MainThread  ] [INFO ]  loaded model is :: SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+  max_iter=-1, probability=True, random_state=None, shrinking=True,
+  tol=0.001, verbose=False)
+2017-09-05 19:55:34,579 [MainThread  ] [INFO ]  y_pred is :: [0 1 1 ..., 1 0 1]
+2017-09-05 19:55:34,611 [MainThread  ] [INFO ]  y_pred probabilities is :: [ 0.50505081  0.56979504  0.56979504 ...,  0.75037056  0.35625997
+  0.84899174]
+2017-09-05 19:55:34,944 [MainThread  ] [INFO ]  Confusion Matrix for model is :: [[ 262  771]
+ [  83 1985]]
+2017-09-05 19:55:35,066 [MainThread  ] [INFO ]  Confusion matrix, without normalization
+2017-09-05 19:55:35,067 [MainThread  ] [INFO ]  [[ 262  771]
+ [  83 1985]]
+2017-09-05 19:55:35,479 [MainThread  ] [INFO ]  Normalized confusion matrix
+2017-09-05 19:55:35,479 [MainThread  ] [INFO ]  [[ 0.2536302  0.7463698]
+ [ 0.0401354  0.9598646]]
+2017-09-05 19:55:35,664 [MainThread  ] [INFO ]  ================ Evaluation metrics for model svm [Dataset is test]=======================
+2017-09-05 19:55:35,665 [MainThread  ] [INFO ]  Accuracy of model is ::
+2017-09-05 19:55:35,666 [MainThread  ] [INFO ]  0.72460496614
+2017-09-05 19:55:35,666 [MainThread  ] [INFO ]  Recall of model is ::
+2017-09-05 19:55:35,668 [MainThread  ] [INFO ]  0.959864603482
+2017-09-05 19:55:35,668 [MainThread  ] [INFO ]  Precision score of model is ::
+2017-09-05 19:55:35,670 [MainThread  ] [INFO ]  0.720246734398
+2017-09-05 19:55:35,670 [MainThread  ] [INFO ]  F1 score of model is ::
+2017-09-05 19:55:35,672 [MainThread  ] [INFO ]  0.822968490879
+2017-09-05 19:55:35,672 [MainThread  ] [INFO ]  Do ROC Analysis..
+2017-09-05 19:55:35,904 [MainThread  ] [INFO ]  testing complete...
