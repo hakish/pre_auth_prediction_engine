@@ -32,6 +32,9 @@ def train(train_data, target_col_name, plots_path, models_path):
 
     # Build naives bayes model
     train_nb_model(feature_frame_train, target_col_name, data_df_train, y_train, plots_path, models_path)
+
+    # Build Gradient Boosting model
+    train_gbm_model(feature_frame_train, target_col_name, data_df_train, y_train, plots_path, models_path)
     # ========================================================================================================= #
 
 def train_nb_model(feature_frame_train, target_col_name, train_data, y_train, plots_path, models_path):
@@ -70,9 +73,7 @@ def train_neural_net_model(feature_frame_train, target_col_name, train_data, y_t
 def train_random_forest_model(feature_frame_train, target_col_name, train_data, y_train, plots_path, models_path):
     train_data_copy = train_data.copy()
     model_file_path = str(models_path + 'model_random_forest.sav')
-    rf = build_random_forest_model(train_data_copy, target_col_name, model_file_path)
-    y_pred_before_save = rf.predict(feature_frame_train)
-    logging.info("describe y_pred_train before save :: "+str(unique(y_pred_before_save)))
+    build_random_forest_model(train_data_copy, target_col_name, model_file_path)
     # Make predictions on the train data and check the model metrics
     y_pred_train, y_pred_prob_train = predict(model_file_path, feature_frame_train)
     logging.info("describe y_pred_train :: "+str(unique(y_pred_train)))
@@ -80,3 +81,15 @@ def train_random_forest_model(feature_frame_train, target_col_name, train_data, 
     calc_perf_metrics_for_model('random_forest', y_train, y_pred_train, target_col_name,
                                 plots_path, 'train')
     do_roc_analysis(y_train, y_pred_prob_train, 'random_forest', plots_path, 'train')
+
+def train_gbm_model(feature_frame_train, target_col_name, train_data, y_train, plots_path, models_path):
+    train_data_copy = train_data.copy()
+    model_file_path = str(models_path + 'model_gbm.sav')
+    build_gbm_model(train_data_copy, target_col_name, model_file_path)
+    # Make predictions on the train data and check the model metrics
+    y_pred_train, y_pred_prob_train = predict(model_file_path, feature_frame_train)
+    logging.info("describe y_pred_train :: "+str(unique(y_pred_train)))
+    # Compute confusion matrix on train data
+    calc_perf_metrics_for_model('gbm', y_train, y_pred_train, target_col_name,
+                                plots_path, 'train')
+    do_roc_analysis(y_train, y_pred_prob_train, 'gbm', plots_path, 'train')

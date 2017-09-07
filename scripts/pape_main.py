@@ -36,7 +36,8 @@ columnNames = ["userid", "drug", "drugsubclass", "drugclass", "drugchemicalname"
 pa_data_df = read_csv_data(filename, columnNames)
 
 # Split the data into train and test
-pa_data_df_train, pa_data_df_test = train_test_split(pa_data_df, test_size=0.33, random_state=42)
+pa_data_df_train, pa_data_df_test = train_test_split(pa_data_df, test_size=0.33, random_state=42, shuffle=False,
+                                                     stratify=None)
 logging.info(pa_data_df_train.shape)
 logging.info(pa_data_df_test.shape)
 target_col_name = "target"
@@ -70,6 +71,8 @@ test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/mod
      'neural_net')
 test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_svm.sav', '../plots/preprocess1/',
      'svm')
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
+     'gbm')
 logging.info("testing complete...")
 # =================================================================================================================#
 
@@ -100,4 +103,6 @@ test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/mod
      'neural_net')
 test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_svm.sav', '../plots/preprocess2/',
      'svm')
+test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
+     'gbm')
 logging.info("testing complete...")

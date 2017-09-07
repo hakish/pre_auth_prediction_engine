@@ -10,6 +10,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
+from sklearn import ensemble
 
 def build_random_forest_model(df, targetColName, model_file_path):
 
@@ -53,3 +54,15 @@ def build_nb_model(df, targetColName, model_file_path):
     mnb.fit(feature_data_frame, target)
     pickle.dump(mnb, open(model_file_path, 'wb'))
     return mnb
+
+def build_gbm_model(df, targetColName, model_file_path):
+    logging.info("Build Gradient Boosting Model")
+    # Fit classifier with out-of-bag estimates
+    params = {'n_estimators': 1200, 'max_depth': 3, 'subsample': 0.5,
+              'learning_rate': 0.01, 'min_samples_leaf': 1, 'random_state': 3}
+    clf = ensemble.GradientBoostingClassifier(**params)
+    feature_data_frame = df.drop(targetColName, axis=1)
+    target = df[targetColName]
+    clf.fit(feature_data_frame, target)
+    pickle.dump(clf, open(model_file_path, 'wb'))
+    return clf

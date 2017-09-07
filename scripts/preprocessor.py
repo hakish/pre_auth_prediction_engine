@@ -134,9 +134,9 @@ def get_cluster_num_for_levels(data_df, target_col_name):
             #     clusters = km.fit_predict(feature_frame_train)
             #     cluster_num_cost.update({num_of_clusters: km.cost_})
             #     logging.info('Cluster cost is :: ' + str(km.cost_))
-            km = kmodes.KModes(n_clusters=8, init='Huang', n_init=5, verbose=1)
+            km = kmodes.KModes(n_clusters=4, init='Huang', n_init=5, verbose=1)
             clusters = km.fit_predict(feature_frame_train)
-            cluster_num_cost.update({8: km.cost_})
+            cluster_num_cost.update({4: km.cost_})
             cluster_col = column + '_cluster_num'
             data_df[cluster_col] = clusters
             data_df[cluster_col] = data_df[cluster_col].astype('category')
