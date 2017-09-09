@@ -9,6 +9,7 @@ Created on Mon Aug  21 08:43:35 2017
 import pandas as pd
 import numpy as np
 from scripts.util import drop_cols
+import prince
 import logging
 from sklearn import metrics
 from sklearn.metrics import pairwise_distances
@@ -163,3 +164,44 @@ def get_cluster_num_for_levels(data_df, target_col_name):
     #     plt.xticks(range(len(cluster_num_cost)), cluster_num_cost.keys())
     #     plt.savefig('../plots/preprocess2/' + 'cluster_num_cost_itr' + "_" + '20' + ".png")
     #     plt.show()
+
+def do_preprocess_3(df, target_col_name, plots_path, suffix):
+    # ------------------------------------------------------------------------------------ #
+    # Do data pre-processing with second approach of dimensionality reduction by taking
+    # finding the similarity between various levels with clustering technique and using
+    # the cluster numbers instead of the actual levels.
+    # ------------------------------------------------------------------------------------ #
+    # Drop a few columns as they should not have any influence on the target
+    # ------------------------------------------------------------------------------------ #
+
+    df = drop_cols(df, ["userid", "doctorid", "transdate"])
+    logging.info(df.describe())
+    logging.info(df.dtypes)
+    # Since all the columns are categorical attributes convert to the appropriate
+    # categorical type
+    for col in df.columns:
+        df[col] = df[col].astype('category')
+
+    logging.info('Dimensionality Reduction with MCA')
+    mca = prince.MCA(df, n_components=1100)
+    # logging.info('principal components are :: '+str(mca.categorical_columns))
+    # logging.info('principal components are :: ' + str(mca.column_component_contributions))
+    # logging.info('principal components are :: ' + str(mca.column_correlations))
+    # logging.info('principal components are :: ' + str(mca.column_cosine_similarities))
+    print('MCA is :: ', mca)
+    logging.info('principal components are :: ' + str(mca.eigenvalues))
+    logging.info('column_correlations are :: ' + str(mca.column_correlations))
+    logging.info('cumulative_explained_inertia are :: ' + str(mca.cumulative_explained_inertia))
+    logging.info('explained_inertia are :: ' + str(mca.explained_inertia))
+    logging.info('cumulative_explained_inertia are :: ' + str(mca.row_cosine_similarities))
+    logging.info(' row_principal_coordinates are :: ' + str(mca. row_principal_coordinates))
+    # logging.info('principal components are :: ' + str(mca.column_standard_coordinates))
+    # mca.plot_rows(show_points=True, show_labels=False, ellipse_fill=True)
+    # mca.plot_relationship_square()
+    mca.plot_cumulative_inertia(threshold=0.8)
+    # plt.savefig(str(plots_path) + 'MCA_Analysis_Cumulative_Inertia_'+suffix + '.png')
+    print(mca.head())
+    logging.info("Pre-processed data frame :: ")
+    logging.info(df.describe())
+    logging.info(df.dtypes)
+    #feature_frame_train = df.drop(target_col_name, axis=1)

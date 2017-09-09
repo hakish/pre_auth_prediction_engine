@@ -12,7 +12,7 @@ import logging
 from scripts.test_model import test
 from scripts.train_model import train
 from scripts.util import read_csv_data
-from scripts.preprocessor import do_preprocess_1, do_preprocess_2
+from scripts.preprocessor import do_preprocess_1, do_preprocess_2, do_preprocess_3
 # =================================================================================================================#
 
 # Initialize the loggers
@@ -52,57 +52,71 @@ target_col_name = "target"
 # Reducing the dimensionality of the dataset due to large number of levels in categorical data
 # by taking the top 10 levels by frequency of occurence and marking the rest as others.
 # =================================================================================================================#
-logging.info("Preprocess the train data with approach 1 and create various models")
-# Do some pre-processing on the data
-train_data_pre_processed = do_preprocess_1(pa_data_df_train.copy(), target_col_name)
-train(train_data_pre_processed, target_col_name, '../plots/preprocess1/', '../models/preprocess1/')
-logging.info("training complete...")
-
-logging.info("evaluate the models on the test data")
-test_data_pre_processed = do_preprocess_1(pa_data_df_test.copy(), target_col_name)
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_naive_bayes.sav',
-     '../plots/preprocess1/',
-     'naive_bayes')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_random_forest.sav',
-     '../plots/preprocess1/',
-     'random_forest')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_neural_net.sav',
-     '../plots/preprocess1/',
-     'neural_net')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_svm.sav', '../plots/preprocess1/',
-     'svm')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
-     'gbm')
-logging.info("testing complete...")
+# logging.info("Preprocess the train data with approach 1 and create various models")
+# # Do some pre-processing on the data
+# train_data_pre_processed = do_preprocess_1(pa_data_df_train.copy(), target_col_name)
+# train(train_data_pre_processed, target_col_name, '../plots/preprocess1/', '../models/preprocess1/')
+# logging.info("training complete...")
+#
+# logging.info("evaluate the models on the test data")
+# test_data_pre_processed = do_preprocess_1(pa_data_df_test.copy(), target_col_name)
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_naive_bayes.sav',
+#      '../plots/preprocess1/',
+#      'naive_bayes')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_random_forest.sav',
+#      '../plots/preprocess1/',
+#      'random_forest')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_neural_net.sav',
+#      '../plots/preprocess1/',
+#      'neural_net')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess1/model_svm.sav', '../plots/preprocess1/',
+#      'svm')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
+#      'gbm')
+# logging.info("testing complete...")
 # =================================================================================================================#
 
 # =================================================================================================================#
 # 2.
 # Pre processing approach:
 # Reducing the dimensionality of the dataset due to large number of levels in categorical data
-# by applying clustering to find similarity in the levels.
+# by applying clustering to find similarity in the levels using K-Modes technique.
 # =================================================================================================================#
-logging.info("Preprocess the train data with approach 2 and create various models")
-# Do some pre-processing on the data
-train_data_pre_processed = do_preprocess_2(pa_data_df_train.copy(), target_col_name)
-logging.info(train_data_pre_processed.describe())
-train(train_data_pre_processed, target_col_name, '../plots/preprocess2/', '../models/preprocess2/')
-logging.info("training complete...")
+# logging.info("Preprocess the train data with approach 2 and create various models")
+# # Do some pre-processing on the data
+# train_data_pre_processed = do_preprocess_2(pa_data_df_train.copy(), target_col_name)
+# logging.info(train_data_pre_processed.describe())
+# train(train_data_pre_processed, target_col_name, '../plots/preprocess2/', '../models/preprocess2/')
+# logging.info("training complete...")
+#
+# logging.info("evaluate the models on the test data")
+# test_data_pre_processed = do_preprocess_2(pa_data_df_test.copy(), target_col_name)
+# logging.info("test data pre-processed describe :: "+str(test_data_pre_processed.describe()))
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_naive_bayes.sav',
+#      '../plots/preprocess2/',
+#      'naive_bayes')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_random_forest.sav',
+#      '../plots/preprocess2/',
+#      'random_forest')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_neural_net.sav',
+#      '../plots/preprocess2/',
+#      'neural_net')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_svm.sav', '../plots/preprocess2/',
+#      'svm')
+# test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
+#      'gbm')
+# logging.info("testing complete...")
 
-logging.info("evaluate the models on the test data")
-test_data_pre_processed = do_preprocess_2(pa_data_df_test.copy(), target_col_name)
-logging.info("test data pre-processed describe :: "+str(test_data_pre_processed.describe()))
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_naive_bayes.sav',
-     '../plots/preprocess2/',
-     'naive_bayes')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_random_forest.sav',
-     '../plots/preprocess2/',
-     'random_forest')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_neural_net.sav',
-     '../plots/preprocess2/',
-     'neural_net')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_svm.sav', '../plots/preprocess2/',
-     'svm')
-test(test_data_pre_processed.copy(), target_col_name, '../models/preprocess2/model_gbm.sav', '../plots/preprocess2/',
-     'gbm')
-logging.info("testing complete...")
+# =================================================================================================================#
+# 3.
+# Pre processing approach:
+# Reducing the dimensionality of the dataset due to large number of levels in categorical data
+# by applying clustering to find similarity in the levels using multiple correspondence analysis (mca) technique.
+# =================================================================================================================#
+
+logging.info("Preprocess the train data with approach 3 and create various models")
+# Do some pre-processing on the data
+train_data_pre_processed = do_preprocess_3(pa_data_df_train.copy(), target_col_name, '../plots/preprocess3/', 'train')
+logging.info(train_data_pre_processed.describe())
+# train(train_data_pre_processed, target_col_name, '../plots/preprocess2/', '../models/preprocess2/')
+# logging.info("training complete...")
